@@ -11,8 +11,14 @@
     <link rel="stylesheet" href="style.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- favicon -->
+    <link href="favicon.ico" rel="shortcut icon" type="favicon.ico">
     <!-- apple-touch -->
-    <link rel =“apple-touch-icon” href=“”>
+    <link rel =“apple-touch-icon” href=“apple_touch_icon.PNG”>
+    <link rel="icon" sizes="192x192" href="apple_touch_icon.PNG">
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -24,44 +30,20 @@
 <body>
 <div class="wrap">
 
-    <!-- header ----------------------------------------------------------------------->
+    <!-- header ----------------------------------------------------------->
     <header>
         <div class="head_ad">
-            <p>マリマなら取引手数料たったの９％<button>無料登録</button></p>
+            <p>マリマなら取引手数料たったの９％　<a href="#">無料登録</a></p>
         </div> <!-- head_ad -->
 
         <div class="head_face">
             <div class="head_face_hamburger_menu">
-                <!-- ハンバーガーメニュー作る！  -->
-            </div>
-            <div class="head_face_hamburger_page_1">
-                <ul>
-                    <li><a href="#"><i class="fas fa-home"></i>ホーム</a></li>
-                    <li><a href="#"><i class="far fa-question-circle"></i>ご利用ガイド</a></li>
-                </ul>
-            </div>
-            <div class="head_face_hamburger_page_2">
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
-            <div class="head_face_hamburger_page_3">
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
             </div>
             <div class="head_face_icon">
-                <a href="#"><img src="images/marrima_icon.PNG"></a>
+                <a href="#"><img src="images/marrima_icon.jpg"></a>
             </div>
             <div class="head_face_menu">
                 <ul>
@@ -71,6 +53,55 @@
                 </ul>
             </div>
         </div> <!-- head_face -->
+
+        <div class="member_menu">
+            <div class="member_menu_page_1">
+                <a href="#">ログイン</a>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i>ホーム</a></li>
+                    <li><a href="#"><i class="far fa-question-circle"></i>ご利用ガイド</a></li>
+                </ul>
+            </div>
+
+            <div class="member_menu_page_2">
+                <div class="normal_member">
+                    <p><!--<img src="#">--><i class="far fa-user-circle"></i></p>
+                    <p>通常会員(本来なら会員名)</p>
+                    <a href="#">出品者登録</a>
+                </div>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i>ホーム</a></li>
+                    <li><a href="#"><i class="far fa-comments"></i>メッセージ</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-check"></i>買ったもの</a></li>
+                    <li><a href="#"><i class="far fa-smile"></i>レビュー</a></li>
+                    <li><a href="#"><i class="far fa-heart"></i>お気に入り</a></li>
+                    <li><a href="#"><i class="fas fa-greater-than"></i>フォロー</a></li>
+                    <li><a href="#"><i class="far fa-user"></i>ユーザー設定</a></li>
+                    <li><a href="#"><i class="far fa-question-circle"></i>ご利用ガイド</a></li>
+                </ul>
+                <a href="#">ログアウト</a>
+            </div>
+            
+            <div class="member_menu_page_3">
+                <div class="exhibit_member">
+                    <p><!--<img src="#">--><i class="fas fa-user-circle"></i></p>
+                    <p>出品者(本来なら会員名)</p>
+                    <a href="#">出品する</a>
+                </div>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i>ホーム</a></li>
+                    <li><a href="#"><i class="fas fa-warehouse"></i>出品者ダッシュボード</a></li>
+                    <li><a href="#"><i class="far fa-comments"></i>メッセージ</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-check"></i>買ったもの</a></li>
+                    <li><a href="#"><i class="far fa-smile"></i>レビュー</a></li>
+                    <li><a href="#"><i class="far fa-heart"></i>お気に入り</a></li>
+                    <li><a href="#"><i class="fas fa-greater-than"></i>フォロー</a></li>
+                    <li><a href="#"><i class="far fa-user"></i>ユーザー設定</a></li>
+                    <li><a href="#"><i class="far fa-question-circle"></i>ご利用ガイド</a></li>
+                </ul>
+                <a href="#">ログアウト</a>
+            </div>
+        </div> <!-- member_menu -->
 
         <div class="gnav">
             <ul>
@@ -159,11 +190,52 @@
         </div> <!-- gnav -->
     </header>
 
-    <!-- top_page ----------------------------------------------------------------------->
+    <!-- top_page -------------------------------------------------------->
     <div class="top_page">
+        <h1>お譲りサイト｜マリマ</h1>
+        <p>卒花嫁からプレ花嫁へ</p>
+        <!--CSSのbackground-imageで背景入れる-->
+        <!--検索機能は後で調べて入れる-->
+    </div>
+
+    <!-- マリマの幸せバトン ---------------------------------------------------->
+    <div class="baton_page">
+    </div>
+
+    <!-- 幸せバトンの流れ ------------------------------------------------------>
+    <div class="flow_page">
 
     </div>
 
+    <!-- Instagram紹介アイテム -------------------------------------------------->
+    <div class="instagram_items">
+
+    </div>
+
+    <!-- 新着アイテム ------------------------------------------------------------>
+    <div class="new_items">
+
+    </div>
+
+    <!-- マリマの使い方 ---------------------------------------------------------->
+    <div class="how_page">
+
+    </div>
+
+    <!-- 新着情報 --------------------------------------------------------------->
+    <div class="article_page">
+
+    </div>
+
+    <!-- ビジョン --------------------------------------------------------------->
+    <div class="vision_page">
+
+    </div>
+
+    <!-- footer --------------------------------------------------------------->
+    <footer>
+
+    </footer>
 
 </div> <!-- wrap -->
 </body>

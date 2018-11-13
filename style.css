@@ -1,8 +1,149 @@
 @charset "utf-8";
 
 *{
+    font-size: 62.5%;
     list-style-type: none;
     text-decoration: none;
     margin: 0;
     padding: 0;
 }
+
+/* --------- header -------------------------------------------------------*/
+
+/* --- head_ad ----------------------------------*/
+.head_ad{
+    width: 100vw;
+    box-sizing: border-box; 
+    background-color: rgb(255,255,255);
+}
+
+.head_ad p{
+    color: rgb(83,83,83);
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.head_ad a{
+    background-color: rgb(200, 200, 200);
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    border: rgb(200,200,200) solid 0.2rem;
+    border-radius: 5%;
+    padding: .5rem;
+}
+
+.head_ad a:hover{
+    background-color: rgb(255,255,255);
+    color: rgb(200,200,200);
+    border: rgb(200,200,200) solid 0.2rem;
+    transition: .3s;
+}
+
+/* --- head_face -------------------------------*/
+.head_face{
+    width: 100vw;
+    box-sizing: border-box; 
+    background-color: #5BBAC7;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- ハンバーガーメニュー -----------*/
+.head_face_hamburger_menu {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2%;
+    background-color:#fff;
+    position: relative;
+    margin: 0 1rem;
+}
+
+.head_face_hamburger_menu span {
+    width: 2.6rem;
+    height: 0.3rem;
+    display: block;
+    background-color: #5BBAC7;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.3rem;
+    margin-top: -0.1rem;
+}
+
+.head_face_hamburger_menu span {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.head_face_hamburger_menu .middle {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.head_face_hamburger_menu .top {
+    -webkit-transform: translateY(-1.2rem);
+    -ms-transform: translateY(-1.2rem);
+    transform: translateY(-1.2rem);
+}
+
+.head_face_hamburger_menu .bottom {
+    -webkit-transform: translateY(1.2rem);
+    -ms-transform: translateY(1.2rem);
+    transform: translateY(1.2rem);
+}
+.head_face_hamburger_menu:hover .middle {
+  background: rgba(51, 51, 51, 0);
+}
+
+.head_face_hamburger_menu:hover .top {
+  -webkit-transform: rotate(-45deg) translateY(0px);
+  -ms-transform: rotate(-45deg) translateY(0px);
+  transform: rotate(-45deg) translateY(0px);
+}
+
+.head_face_hamburger_menu:hover .bottom {
+  -webkit-transform: rotate(45deg) translateY(0px);
+  -ms-transform: rotate(45deg) translateY(0px);
+  transform: rotate(45deg) translateY(0px);
+}
+
+/* --- head_face_icon ---------------*/
+.head_face_icon img{
+    max-width: 4rem;
+}
+
+/* --- head_face_menu ---------------*/
+.head_face_menu ul{
+    margin:0;
+    padding: 0;
+}
+.head_face_menu li{
+    display: inline;
+    margin: 0 1rem;
+}
+
+.head_face_menu li a{
+    color: #fff;
+    font-size: 3rem;
+}
+
+/* --- page1 会員未登録orログイン画面 ---*/
+.member_menu_page_1{
+    display: none;
+}
+
+/* --- page2 一般会員画面 -------------*/
+.member_menu_page_2{
+    display: none;
+}
+
+/* --- page3 出品会員画面 -------------*/
+.member_menu_page_3{
+    display: none;
+}
+
