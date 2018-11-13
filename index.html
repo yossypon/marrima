@@ -22,7 +22,16 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-    
+        // --- gnavの動き --------------- //
+        $(function(){
+            $(".gnav_2nd").hide();
+            $(".gnav_1st_stage > li").mouseenter(function(){
+                $("ul:not(:animated)",this).show("fast");
+            }).mouseleave(function(){
+                $("ul",this).slideUp("fast");
+			})
+        })
+
     </script>
 </head>
 
@@ -35,7 +44,10 @@
         <div class="head_ad">
             <p>マリマなら取引手数料たったの９％　<a href="#">無料登録</a></p>
         </div> <!-- head_ad -->
+    </header>
 
+    <!-- top_parts ----------------------------------------------------------->
+    <div class="top_parts"> 
         <div class="head_face">
             <div class="head_face_hamburger_menu">
                 <span class="top"></span>
@@ -104,11 +116,11 @@
         </div> <!-- member_menu -->
 
         <div class="gnav">
-            <ul>
+            <ul class="gnav_1st_stage">
                 <li><a href="#">衣装</a>
-                    <ul>
+                    <ul class="gnav_2nd gnav_2nd_stage">
                         <li><a href="#">新婦</a>
-                            <ul>
+                            <ul class="gnav_3rd_stage">
                                 <li><a href="#">ウェデイングドレス</a></li>
                                 <li><a href="#">カラードレス</a></li>
                                 <li><a href="#">ブライダルインナー</a></li>
@@ -122,7 +134,7 @@
                             </ul>
                         </li>
                         <li><a href="#">新郎</a>
-                            <ul>
+                            <ul class="gnav_3rd_stage">
                                 <li><a href="#">タキシード・スーツ・シャツ</a></li>
                                 <li><a href="#">小物</a></li>
                                 <li><a href="#">ブートニア</a></li>
@@ -131,7 +143,7 @@
                             </ul>
                         </li>
                         <li><a href="#">キッズ</a>
-                            <ul>
+                            <ul class="gnav_3rd_stage">
                                 <li><a href="#">女の子</a></li>
                                 <li><a href="#">男の子</a></li>
                             </ul>
@@ -141,16 +153,16 @@
                     </ul>
                 </li>
                 <li><a href="#">準備期間</a>
-                    <ul>
+                    <ul class="gnav_2nd gnav_2nd_end_stage">
                         <li><a href="#">招待状関係</a></li>
                         <li><a href="#">前撮り</a></li>
                         <li><a href="#">その他</a></li>
                     </ul>
                 </li>
                 <li><a href="#">装飾</a>
-                    <ul>
+                    <ul class="gnav_2nd gnav_2nd_end_stage">
                         <li><a href="#">ウェルカムスペース</a></li>
-                        <li><a href="#">会場全体（照明・ガーランド等）</a></li>
+                        <li><a href="#">会場全体<br>（照明・ガーランド等）</a></li>
                         <li><a href="#">高砂</a></li>
                         <li><a href="#">ゲストテーブル</a></li>
                         <li><a href="#">フォトブース</a></li>
@@ -158,16 +170,16 @@
                     </ul>
                 </li>
                 <li><a href="#">グッズ</a>
-                    <ul>
+                    <ul class="gnav_2nd gnav_2nd_stage">
                         <li><a href="#">挙式で使うもの</a>
-                            <ul>
+                            <ul class="gnav_3rd_stage">
                                 <li><a href="#">リングピロー</a></li>
                                 <li><a href="#">各種シャワー</a></li>
                                 <li><a href="#">その他</a></li>
                             </ul>
                         </li>
                         <li><a href="#">披露宴で使うもの</a>
-                            <ul>
+                            <ul class="gnav_3rd_stage">
                                 <li><a href="#">ケーキ入刀</a></li>
                                 <li><a href="#">フォトラウンド</a></li>
                                 <li><a href="#">ゲーム</a></li>
@@ -177,7 +189,7 @@
                     </ul>
                 </li>
                 <li><a href="#">オーダー</a>
-                    <ul>
+                    <ul class="gnav_2nd gnav_2nd_end_stage">
                         <li><a href="#">ペーパーアイテム</a></li>
                         <li><a href="#">衣装</a></li>
                         <li><a href="#">挙式・披露宴アイテム</a></li>
@@ -188,13 +200,12 @@
                 </li>
             </ul>
         </div> <!-- gnav -->
-    </header>
+    </div> <!-- top_parts -->
 
     <!-- top_page -------------------------------------------------------->
     <div class="top_page">
         <h1>お譲りサイト｜マリマ</h1>
         <p>卒花嫁からプレ花嫁へ</p>
-        <!--CSSのbackground-imageで背景入れる-->
         <!--検索機能は後で調べて入れる-->
     </div>
 
