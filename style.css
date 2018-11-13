@@ -210,7 +210,8 @@
 }
 
 .gnav_2nd>li{
-    transform: translateY(1.2rem); /* 仮 */
+    width: 150%;
+    transform: translateY(1.2rem);
     background-color: #fff;
     padding: 1rem;
 }
@@ -242,7 +243,7 @@
     background-size: cover;
 }
 
-/* 700px以下(S)の環境 */
+/* 52rem以下の環境 */
 @media screen and (max-width:52rem){
     .top_page{
         background-image: url(images/top_img_small3.jpg);
@@ -252,7 +253,7 @@
         background-size: cover;
     }
 }
-
+/* 30rem以下の環境 */
 @media screen and (max-width:30rem){
     .top_page{
         background-image: url(images/top_img_small3.jpg);
@@ -269,15 +270,33 @@
     font-size: 3.4rem;
     text-align: center;
     transform: translateY(18rem);
+    z-index: -1; /* 🔥 なぜメニューバーの上に文字がいってしまうのか？ */
 }
 
 .top_page p{
     font-size: 2rem;
     text-align: center;
     transform: translateY(18rem);
+    z-index: -1;
 }
 
 /* --------- baton_page -------------------------------------------------------*/
 .baton_page{
-    
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.baton_page h2{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.baton_page p{
+    text-align: center;
+}
+
+.baton_page img{
+    max-width: 100%;
+    text-align: center;
 }

@@ -26,7 +26,7 @@
         $(function(){
             $(".gnav_2nd").hide();
             $(".gnav_1st_stage > li").mouseenter(function(){
-                $("ul:not(:animated)",this).show("fast");
+                $("ul:not(:animated)",this).show();
             }).mouseleave(function(){
                 $("ul",this).slideUp("fast");
 			})
@@ -211,6 +211,8 @@
 
     <!-- マリマの幸せバトン ---------------------------------------------------->
     <div class="baton_page">
+        <h2>マリマでの幸せバトン</h2>
+        <p><img src="images/baton.jpg"></p>
     </div>
 
     <!-- 幸せバトンの流れ ------------------------------------------------------>
