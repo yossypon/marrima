@@ -317,4 +317,65 @@ html{
 }
 
 /* --------- Instagram紹介アイテム --------------------------------------------------*/
+.instagram_items{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+}
 
+.instagram_items h2{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.insta_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.insta_item{
+    width: 40%;
+    height: 35%;
+    border: rgb(208,208,208) 0.1rem solid;
+    box-sizing: border-box;
+    margin: 1rem;
+    box-shadow: 1px 1px 1px 1px rgb(208,208,208);
+    cursor: pointer;
+}
+
+.insta_item_parts1{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    padding: 0 7%;
+}
+
+.insta_item_parts1 img{
+    max-width: 100%;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.insta_item p{
+    font-size: 1.5rem;
+    margin: 0.5rem auto 1rem 0.5rem;
+}
+
+.insta_item_parts2{
+    width: 100%;
+    height: 10%;
+    border-top: rgb(118, 118, 118) 0.03rem solid;
+    border-bottom: rgb(118, 118, 118) 0.03rem solid;
+    box-sizing: border-box;
+}
+
+.insta_item_parts3{
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+}
+
+/* --------- 新着アイテム -------------------------------------------------------*/
