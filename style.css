@@ -1,7 +1,9 @@
 @charset "utf-8";
+html{
+    font-size: 62.5%;
+}
 
 *{
-    font-size: 62.5%;
     list-style-type: none;
     text-decoration: none;
     margin: 0;
@@ -13,7 +15,7 @@
 /* --- head_ad -------------------------*/
 .head_ad{
     width: 100vw;
-    height: 3rem; /* ここで高さ入れることで下のposition:fixed;使えるようになるよね？ */
+    height: 3rem;
     box-sizing: border-box; 
     background-color: rgb(255,255,255);
 }
@@ -43,10 +45,10 @@
 
 /* --------- top_parts -------------------------------------------------------*/
 .top_parts{
-    position: relative; /* 🔥 このrelativeにより、このtop_partsが位置基準になるのでは？ */
+    /*position: fixed;  ここはjQueryでclassを操作する */
     width:100vw;
     height: 8.8rem;
-    margin-top: 3rem;  /* 🔥 高さ固定して、position使っているがheaderが消えるのはなぜ？ */
+    z-index: 1000;
 }
 
 /* --- head_face -------------------------------*/
@@ -60,9 +62,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* 🔥 問題のpositin:fixed; */
-    top: 0;
-    left: 0;
 }
 
 /* --- ハンバーガーメニュー -----------*/
@@ -129,27 +128,33 @@
 .head_face_icon img{
     max-width: 4rem;
     transform: translateX(3rem); /* ハンバーガーとhead_face_menuの幅が違うので位置調整*/
-    vertical-align: bottom; /* 🔥 これいる？ */
+    vertical-align: bottom; /* これいる？ベースラインの観点から必要！ */
 }
 
 /* --- head_face_menu ---------------*/
 .head_face_menu ul{
     margin:0;
     padding: 0;
-    height: 4rem; /* 🔥 なぜ真ん中に行かない？？ */
+    height: 4rem;
+    
 }
 .head_face_menu li{
     display: inline;
     margin: 0 1rem;
+    line-height: 4rem;
 }
 
 .head_face_menu li a{
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .head_face_menu li a:hover{
     color: rgba(255, 255, 255, 0.700);
+}
+
+.head_face_menu li i{
+    vertical-align: middle;
 }
 
 /* --- gnav ---------------------------------------*/
@@ -157,9 +162,6 @@
     width: 100vw;
     box-sizing: border-box;
     background-color: #EFEFEF;
-    position: fixed; /* 🔥 問題のpositin:fixed; */
-    top: 4.4rem;
-    left: 0;
 }
 
 .gnav_1st_stage a{
@@ -207,6 +209,7 @@
 .gnav_1st_stage>li{
     width: 15%;
     padding: 1rem;
+    z-index: 2000; /* これでhoverで出てくるメニューがtop_pageの文字の下に潜らない */
 }
 
 .gnav_2nd>li{
@@ -235,7 +238,7 @@
 
 /* --------- top_page -------------------------------------------------------*/
 .top_page{
-    background-image: url(images/top_img.jpg); /* 🔥 svgデータのロゴを文字として乗せれる？ */
+    background-image: url(images/top_page_big.jpg); /* 🔥 svgデータのロゴを文字として乗せれる？ */
     background-repeat: no-repeat;
     max-width: 100%;
     height: 100vh;
@@ -246,23 +249,11 @@
 /* 52rem以下の環境 */
 @media screen and (max-width:52rem){
     .top_page{
-        background-image: url(images/top_img_small3.jpg);
+        background-image: url(images/top_img_sm.jpg);
         background-repeat: no-repeat;
         width: 100%;
         box-sizing: border-box;
         background-size: cover;
-    }
-}
-/* 30rem以下の環境 */
-@media screen and (max-width:30rem){
-    .top_page{
-        background-image: url(images/top_img_small3.jpg);
-        background-repeat: no-repeat;
-        box-sizing: border-box;
-        background-size: 100%;
-    }
-    .top_page p{
-        display: none;
     }
 }
 
@@ -270,14 +261,17 @@
     font-size: 3.4rem;
     text-align: center;
     transform: translateY(18rem);
-    z-index: -1; /* 🔥 なぜメニューバーの上に文字がいってしまうのか？ */
 }
 
 .top_page p{
     font-size: 2rem;
     text-align: center;
     transform: translateY(18rem);
-    z-index: -1;
+    padding: 2rem 8rem 0 8rem;
+}
+
+.top_page img{
+    max-width: 100%;
 }
 
 /* --------- baton_page -------------------------------------------------------*/
@@ -300,3 +294,27 @@
     max-width: 100%;
     text-align: center;
 }
+
+/* --------- flow_page -------------------------------------------------------*/
+.flow_page{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.flow_page h2{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.flow_page p{
+    text-align: center;
+}
+
+.flow_page img{
+    max-width: 100%;
+    text-align: center;
+}
+
+/* --------- Instagram紹介アイテム --------------------------------------------------*/
+

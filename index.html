@@ -21,18 +21,8 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        // --- gnavの動き --------------- //
-        $(function(){
-            $(".gnav_2nd").hide();
-            $(".gnav_1st_stage > li").mouseenter(function(){
-                $("ul:not(:animated)",this).show();
-            }).mouseleave(function(){
-                $("ul",this).slideUp("fast");
-			})
-        })
+    <script src="script.js"></script>
 
-    </script>
 </head>
 
 
@@ -206,6 +196,7 @@
     <div class="top_page">
         <h1>お譲りサイト｜マリマ</h1>
         <p>卒花嫁からプレ花嫁へ</p>
+        <p><img src="images/marrima.svg" width="" alt="マリマのロゴ"></p>
         <!--検索機能は後で調べて入れる-->
     </div>
 
@@ -217,7 +208,8 @@
 
     <!-- 幸せバトンの流れ ------------------------------------------------------>
     <div class="flow_page">
-
+        <h2>幸せバトンの流れ</h2>
+        <p><img src="images/flow.jpg"></p>
     </div>
 
     <!-- Instagram紹介アイテム -------------------------------------------------->
