@@ -283,6 +283,7 @@ html{
 
 .baton_page h2{
     font-size: 2rem;
+    color: rgb(130,130,130);
     margin: 2rem 0;
 }
 
@@ -304,6 +305,7 @@ html{
 
 .flow_page h2{
     font-size: 2rem;
+    color: rgb(130,130,130);
     margin: 2rem 0;
 }
 
@@ -316,7 +318,7 @@ html{
     text-align: center;
 }
 
-/* --------- Instagram紹介アイテム --------------------------------------------------*/
+/* --------- Instagram紹介アイテム -----４商品---------------------------------------------*/
 .instagram_items{
     width: 100vw;
     box-sizing: border-box;
@@ -325,6 +327,7 @@ html{
 
 .instagram_items h2{
     font-size: 2rem;
+    color: rgb(130,130,130);
     margin: 2rem 0;
 }
 
@@ -337,13 +340,30 @@ html{
 }
 
 .insta_item{
-    width: 40%;
-    height: 35%;
+    width: 26rem;
+    height: 25rem;
     border: rgb(208,208,208) 0.1rem solid;
+    border-radius: 2%;
     box-sizing: border-box;
     margin: 1rem;
     box-shadow: 1px 1px 1px 1px rgb(208,208,208);
     cursor: pointer;
+}
+
+/* 35rem以上43rem以下の環境 */
+@media screen and (min-width:35rem) and (max-width:43rem){
+    .insta_item{
+        width: 24rem;
+        height: 20rem;
+    }
+}
+
+/* 38rem以下の環境 */
+@media screen and (max-width:35rem){
+    .insta_item{
+        width: 20rem;
+        height: 16rem;
+    }
 }
 
 .insta_item_parts1{
@@ -351,17 +371,19 @@ html{
     height: 80%;
     box-sizing: border-box;
     padding: 0 7%;
-}
-
-.insta_item_parts1 img{
-    max-width: 100%;
+    object-fit: contain;
     text-align: center;
     vertical-align: bottom;
 }
 
+.insta_item_parts1 img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .insta_item p{
-    font-size: 1.5rem;
-    margin: 0.5rem auto 1rem 0.5rem;
+    font-size: 5%;
+    margin: 0.1rem 0 0.5rem 0.5rem;
 }
 
 .insta_item_parts2{
@@ -378,4 +400,120 @@ html{
     box-sizing: border-box;
 }
 
-/* --------- 新着アイテム -------------------------------------------------------*/
+/* --------- 新着アイテム -----６商品--------------------------------------------------*/
+.new_items{
+    width: 100vw;
+    background-color: rgb(224,242,246);
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.new_items h2{
+    font-size: 2rem;
+    color: rgb(130,130,130);
+    margin: 2rem 0;
+}
+
+.new_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.new_item{
+    width: 30rem;
+    height: 35rem;
+    background-color: #fff;
+    border: rgb(208,208,208) 0.1rem solid;
+    border-radius: 2%;
+    box-sizing: border-box;
+    margin: 1rem;
+    box-shadow: 1px 1px 1px 1px rgb(208,208,208);
+    cursor: pointer;
+}
+
+.new_item p{
+    font-size: 10%;
+    margin: 0.1rem 0 0.5rem 0.5rem;
+}
+
+/* 35rem以上43rem以下の環境 */
+@media screen and (min-width:35rem) and (max-width:43rem){
+    .new_item{
+        width: 20rem;
+        height: 23rem;
+    }
+}
+
+/* 38rem以下の環境 */
+@media screen and (max-width:35rem){
+    .new_item{
+        width: 16rem;
+        height: 18rem;
+    }
+}
+
+.slideshow_pic{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    padding: 0 ;
+    object-fit: contain;
+    text-align: center;
+    vertical-align: bottom;
+    position:relative; /* スライドショーのため */
+}
+
+.slideshow_pic img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.slideshow_p_1{
+    width: 100%;
+    height: 10%;
+    border-top: rgb(118, 118, 118) 0.03rem solid;
+    border-bottom: rgb(118, 118, 118) 0.03rem solid;
+    box-sizing: border-box;
+}
+
+.slideshow_p_2{
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+}
+
+.new_page_more{
+    text-align: center;
+    margin: 4rem 0 3rem 0;
+}
+
+.new_page_more a{
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(130,130,130);
+    background-color: #fff;
+    border: rgb(198,201,100) 0.2rem solid;
+    padding: 1rem 3rem;
+    border-radius: 6%;
+}
+
+.new_page_more a:hover{
+    border: #fff 0.2rem solid;
+    background-color: rgb(211, 213, 135);
+}
+
+/* ここからスライドショーのCSS */
+/* img要素は絶対配置で一か所に重ねる */
+.slideshow_pic img{
+	position:absolute;
+    top:0;
+    left: 50%; /*いったん50%ずらしておいてjQueryで幅の半分を計算して調整する*/
+}
+/* 2番目以降のimg要素にclass="alt"を付け、見えなくする */
+.slideshow_pic img.alt{
+    display:none;
+}

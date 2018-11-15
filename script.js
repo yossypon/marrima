@@ -11,7 +11,7 @@ $(function(){
 })
 
 
-// --- gnavの動き --------------- //
+// --- gnavの動き --------------------------------- //
 $(function(){
     $(".gnav_2nd").hide();
     $(".gnav_1st_stage > li").mouseenter(function(){
@@ -22,3 +22,25 @@ $(function(){
 })
 
 
+// --- new_itemのスライドショー --------------------- //
+$(function(){
+    
+	var interval = 3500; 
+	$('.slideshow_pic').each(function(){
+
+        $('.slideshow_pic').each(function(){
+            $("img",".slideshow_pic").css("margin-left",-1*(parseInt($("img",".slideshow_pic").width()/2)));
+        console.log(parseInt($("img",".slideshow_pic").width()/2));
+        })
+
+        var container = $(this);  // このthisは、slideshow_pic
+		function switchImg(){
+			var images = container.find('img');
+			var first = images.eq(0);
+			var second = images.eq(1);
+			first.appendTo(container).fadeOut(800); 
+			second.fadeIn(800);
+		}
+		setInterval(switchImg, interval);
+	});
+});
