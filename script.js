@@ -1,5 +1,5 @@
 // --- top_partsの動き(スクロールイベント) ---------- //
-// 上から30px以下の間は何もしない、30px以上進んだらposition:fixed;でtop:0;固定にする
+   // 上から30px以下の間は何もしない、30px以上進んだらposition:fixed;でtop:0;固定にする
 $(function(){
     $(window).scroll(function(){        
         if($(this).scrollTop() < 30){
@@ -22,8 +22,7 @@ $(function(){
 })
 
 
-// --- new_itemのスライドショー --------------------- //
-
+// --- new_itemのスライドショー （画像）--------------------- //
 $(function(){
     $('.slideshow_pic').each(function(){
 
@@ -32,6 +31,7 @@ $(function(){
             //console.log(parseInt($(this).width()/2));
         })
     })
+    // 上の方法で幅の半分の長さを取得しているが、パソコン画面でリサイズした際に値を新しく取得するわけではないので、自動で新しく値を取得させるには専用の記述が必要。（これはかなりCPU喰うらしい）スマホの画面、タブレットの画面などそれぞれの端末で開いた際の表示は問題ない。問題なのは、PCで閲覧中に画面をリサイズされた場合。
 
 	var interval = 3500; 
 	$('.slideshow_pic').each(function(){
@@ -48,3 +48,20 @@ $(function(){
 	})
 })
 
+
+// --- new_itemのスライドショー （文字）--------------------- //
+$(function(){
+    var interval = 3500; 
+	$('.slideshow_p').each(function(){
+
+        var paragraph = $(this);
+		function switchText(){
+			var images1 = paragraph.find('p');
+			var first1 = images1.eq(0);
+			var second1 = images1.eq(1);
+			first1.appendTo(paragraph).fadeOut(800); 
+			second1.fadeIn(800);
+		}
+		setInterval(switchText, interval);
+	})
+})

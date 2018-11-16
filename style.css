@@ -238,7 +238,7 @@ html{
 
 /* --------- top_page -------------------------------------------------------*/
 .top_page{
-    background-image: url(images/top_page_big.jpg); /* 🔥 svgデータのロゴを文字として乗せれる？ */
+    background-image: url(images/top_page_big.jpg);
     background-repeat: no-repeat;
     max-width: 100%;
     height: 100vh;
@@ -496,17 +496,17 @@ html{
     font-weight: bold;
     color: rgb(130,130,130);
     background-color: #fff;
-    border: rgb(198,201,100) 0.2rem solid;
+    border: rgb(240, 237, 191) 0.2rem solid;
     padding: 1rem 3rem;
     border-radius: 6%;
 }
 
 .new_page_more a:hover{
     border: #fff 0.2rem solid;
-    background-color: rgb(211, 213, 135);
+    background-color: rgb(240, 237, 191);
 }
 
-/* ここからスライドショーのCSS */
+/* ここからスライドショーのCSS(画像) */
 /* img要素は絶対配置で一か所に重ねる */
 .slideshow_pic img{
 	position:absolute;
@@ -514,8 +514,191 @@ html{
     left: 50%; /*いったん50%ずらしておいてjQueryで幅の半分を計算して調整する*/
     overflow: hidden;
 }
-
 /* 2番目以降のimg要素にclass="alt"を付け、見えなくする */
 .slideshow_pic img.alt{
     display:none;
+}
+
+/* ここからスライドショーのCSS(文字) */
+.slideshow_p{
+    position: relative;
+}
+.slideshow_p p{
+	position:absolute;
+    top:0;
+    left: 0; 
+}
+.slideshow_p p.alt{
+    display:none;
+}
+
+/* --------- マリマの使い方ページ ---------------------------------------------------------*/
+.how_page{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+    background-image: url(images/mitete.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.how_page h2{
+    font-size: 2rem;
+    color: rgb(130,130,130);
+    margin: 2rem 0;
+}
+
+.how_page_section{
+    margin: 0 auto;
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.how_page_parts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-8rem);
+}
+
+.how_page_parts p{
+    font-size: 1.7rem;
+    color: rgb(130,130,130);
+}
+
+.how_page_button{
+    margin: 3rem;
+}
+
+.how_page_button a{
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(130,130,130);
+    background-color: #fff;
+    border: rgb(249, 246, 200) 0.2rem solid;
+    padding: 1rem 3rem;
+    border-radius: 6%;
+}
+
+.how_page_button a:hover{
+    color: rgb(94, 94, 94);
+    border: #fff 0.2rem solid;
+    background-color: #F7F5D6;
+}
+
+/* --------- 新着情報 ----------------------------------------------------------------*/
+.news_page{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.news_page h2{
+    font-size: 2rem;
+    color: rgb(130,130,130);
+    margin: 2rem 0;
+}
+
+.news_wrap{
+    background-color: rgb(235,235,235);
+    margin: 0 auto;
+    width: 88%;
+    padding: 2rem 0 .2rem 0;
+}
+
+.news_article{
+    background-color: #fff;
+    margin: 0 auto 3rem auto;
+    width: 88%;
+    border-radius: 2%;
+    padding: .5rem;
+}
+
+.news_article h3{
+    font-size: 1.8rem;
+    color: rgb(89, 89, 89);
+    margin: 1rem 0;
+}
+
+.news_contents{
+    overflow: hidden;
+    width: 93%;
+    margin: auto;
+    padding: 0 0 1rem 0;
+}
+
+.news_contents img{
+    float: left;
+    width:16%;
+    border: rgb(235,235,235) 0.1rem solid;
+}
+
+.news_contents p{
+    font-size: 1.4rem;
+    float: right;
+    width:83%;
+}
+
+/* --------- ビジョン ----------------------------------------------------------------*/
+.vision_page{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.vision_page h2{
+    font-size: 2rem;
+    color: rgb(130,130,130);
+    margin: 2rem 0;
+}
+
+.vision_page_word{
+    width: 100%; 
+    padding-top: 60%; /* このようにタテヨコ比を固定で伸縮させる場合にこのpadding-top(かbottom)を使う */
+    background-image: url(images/vision.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.vision_page_word p{
+    font-family: 'Kalam', cursive;
+    font-size: 7rem;
+    text-align: center;
+    transform: translateY(-5rem);
+}
+
+/* --------- footer ----------------------------------------------------------------*/
+footer{
+    width: 100vw;
+    background-color: rgb(235,235,235);
+    margin: 2rem 0 0 0;
+    padding: 4rem 0 3rem 0;
+}
+
+footer ul{
+    text-align: center;
+    transform: translateX(-2rem);
+}
+
+footer li{
+    display: inline-block;
+    border-bottom: rgb(152, 152, 152) .1rem solid;
+}
+
+footer li a{
+    font-size: 1.4rem;
+    color: rgb(89, 89, 89);
+    padding: 2rem;
+}
+
+footer li a:hover{
+    color: rgba(89, 89, 89, 0.578);
 }
