@@ -512,7 +512,9 @@ html{
 	position:absolute;
     top:0;
     left: 50%; /*いったん50%ずらしておいてjQueryで幅の半分を計算して調整する*/
+    overflow: hidden;
 }
+
 /* 2番目以降のimg要素にclass="alt"を付け、見えなくする */
 .slideshow_pic img.alt{
     display:none;

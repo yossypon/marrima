@@ -23,15 +23,18 @@ $(function(){
 
 
 // --- new_itemのスライドショー --------------------- //
+
 $(function(){
-    
+    $('.slideshow_pic').each(function(){
+
+        $("img",this).each(function(){
+            $(this).css("margin-left",-1*(parseInt($(this).width()/2)));
+            //console.log(parseInt($(this).width()/2));
+        })
+    })
+
 	var interval = 3500; 
 	$('.slideshow_pic').each(function(){
-
-        $('.slideshow_pic').each(function(){
-            $("img",".slideshow_pic").css("margin-left",-1*(parseInt($("img",".slideshow_pic").width()/2)));
-        console.log(parseInt($("img",".slideshow_pic").width()/2));
-        })
 
         var container = $(this);  // このthisは、slideshow_pic
 		function switchImg(){
@@ -42,5 +45,6 @@ $(function(){
 			second.fadeIn(800);
 		}
 		setInterval(switchImg, interval);
-	});
-});
+	})
+})
+
