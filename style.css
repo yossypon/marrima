@@ -166,9 +166,16 @@ html{
 
 .gnav_1st_stage a{
     color:#666666;
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* 💡 スマホで見たら文字大きかったから */
     text-align: center;
     display: block;
+}
+
+/* 45rem以下の環境 */
+@media screen and (max-width:45rem){
+    .gnav_1st_stage a{
+        font-size: 1.1rem;
+    }
 }
 
 .gnav_2nd_stage>li>a{
@@ -274,6 +281,16 @@ html{
     max-width: 100%;
 }
 
+/* 52rem以下の環境 */ /* 💡 スマホで見たら文字大きかったから */
+@media screen and (max-width:32rem){
+    .top_page h1{
+        font-size: 3rem;
+    }
+    .top_page p{
+        font-size: 1.7rem;
+    }
+}
+
 /* --------- baton_page -------------------------------------------------------*/
 .baton_page{
     width: 100vw;
@@ -340,7 +357,7 @@ html{
 }
 
 .insta_item{
-    width: 26rem;
+    width: 25rem;
     height: 25rem;
     border: rgb(208,208,208) 0.1rem solid;
     border-radius: 2%;
@@ -353,16 +370,16 @@ html{
 /* 35rem以上43rem以下の環境 */
 @media screen and (min-width:35rem) and (max-width:43rem){
     .insta_item{
-        width: 24rem;
+        width: 20rem;
         height: 20rem;
     }
 }
 
-/* 38rem以下の環境 */
+/* 35rem以下の環境 */ /* 💡 スマホで見たら大きかったから */
 @media screen and (max-width:35rem){
     .insta_item{
-        width: 20rem;
-        height: 16rem;
+        width: 14rem;
+        height: 14rem;
     }
 }
 
@@ -447,11 +464,11 @@ html{
     }
 }
 
-/* 38rem以下の環境 */
+/* 35rem以下の環境 */ /* 💡 スマホで見たら大きかったから */
 @media screen and (max-width:35rem){
     .new_item{
-        width: 16rem;
-        height: 18rem;
+        width: 14rem;
+        height: 16rem;
     }
 }
 
@@ -568,8 +585,15 @@ html{
 }
 
 .how_page_parts p{
-    font-size: 1.7rem;
+    font-size: 1.8rem; 
     color: rgb(130,130,130);
+}
+
+/* 💡 スマホで見たら文字大きかったから */
+@media screen and (max-width:35rem){
+    .how_page_parts p{
+        font-size: 1.5rem;
+    }
 }
 
 .how_page_button{
@@ -627,6 +651,13 @@ html{
     margin: 1rem 0;
 }
 
+/* 💡 スマホで見たら文字大きかったから */
+@media screen and (max-width:35rem){
+    .news_article h3{
+        font-size: 1.5rem;
+    }
+}
+
 .news_contents{
     overflow: hidden;
     width: 93%;
@@ -638,12 +669,20 @@ html{
     float: left;
     width:16%;
     border: rgb(235,235,235) 0.1rem solid;
+    margin-right: 0.5rem;
 }
 
 .news_contents p{
     font-size: 1.4rem;
     float: right;
     width:83%;
+}
+
+/* 💡 スマホで見たら文字大きかったから */
+@media screen and (max-width:35rem){
+    .news_contents p{
+        font-size: 1.2rem;
+    }
 }
 
 /* --------- ビジョン ----------------------------------------------------------------*/
@@ -683,22 +722,31 @@ footer{
     padding: 4rem 0 3rem 0;
 }
 
-footer ul{
-    text-align: center;
+.footer_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.footer_link{
+    width: 15rem;
     transform: translateX(-2rem);
-}
-
-footer li{
-    display: inline-block;
     border-bottom: rgb(152, 152, 152) .1rem solid;
+    text-align: center;
 }
 
-footer li a{
-    font-size: 1.4rem;
+.footer_link a{
+    font-size: 1.2rem;
     color: rgb(89, 89, 89);
     padding: 2rem;
 }
 
-footer li a:hover{
-    color: rgba(89, 89, 89, 0.578);
+.footer_link.long a{
+    font-size: 1.1rem;
+}
+
+.footer_link a:hover{
+    color: rgba(77, 206, 228, 0.955);
 }

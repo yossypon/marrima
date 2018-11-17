@@ -14,11 +14,18 @@ $(function(){
 // --- gnavの動き --------------------------------- //
 $(function(){
     $(".gnav_2nd").hide();
+    
+    var w = $(window).width();
+    var x = 801; // 800pxがFireHD8の画面サイズ
+    if(w >= x){
+
     $(".gnav_1st_stage > li").mouseenter(function(){
         $("ul:not(:animated)",this).show();
     }).mouseleave(function(){
         $("ul",this).slideUp("fast");
     })
+
+    }
 })
 
 
