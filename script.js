@@ -15,6 +15,7 @@ $(function(){
 $(function(){
     $(".gnav_2nd").hide();
     
+    // リサイズでやる
     var w = $(window).width();
     var x = 801; // 800pxがFireHD8の画面サイズ
     if(w >= x){

@@ -226,21 +226,152 @@ html{
     padding: 1rem;
 }
 
-/* --------- member_menu -------------------------------------------------------*/
+/* --------- member_menu -----------------------------------------------------*/
+.member_menu{
+    background-color: pink;
+    width: 28rem;
+    height: 100vh;
+    position: relative;
+    display: none; /* ここでメニュー有無 */
+}
+
+.member_menu_page{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.member_menu_page ul li a{
+    font-size: 1.7rem;
+    color: #666666;
+    display: block;
+    width: 28rem;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+}
+
+.member_menu_page ul li a:hover{
+    background-color: rgb(235,241,246);
+}
+
+.member_menu_page ul li a .fas,
+.member_menu_page ul li a .far{
+    color: rgb(54,158,176);
+}
+
+.member_menu_page ul li:nth-last-child(2){
+    border-top: #848484 0.1rem solid;
+}
+
+.member_menu_page ul li:last-child{
+    border-bottom: #848484 0.1rem solid;
+}
+
+.member_logout{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+}
+.member_logout a{
+    color: #fff;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    border: rgb(54,158,176) 0.16rem solid;
+    border-radius: 2%;
+    background-color: rgb(54,158,176);
+}
+.member_logout a:hover{
+    color: rgb(54,158,176);
+    background-color: #fff;
+}
 
 /* --- page1 会員未登録orログイン画面 ---*/
 .member_menu_page_1{
     display: none;
 }
+.member_login{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    border-bottom: .1rem #EFEFEF solid;
+}
+.member_login a{
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: rgb(54,158,176) .2rem solid;
+    border-radius: 2%;
+    background-color: rgb(54,158,176);
+}
+.member_login a:hover{
+    color: rgb(54,158,176);
+    background-color: #fff;
+}
 
-/* --- page2 一般会員画面 -------------*/
+/* --- 会員画面 -------------*/
 .member_menu_page_2{
     display: none;
 }
-
-/* --- page3 出品会員画面 -------------*/
 .member_menu_page_3{
     display: none;
+}
+/* --- page2/page3 一般会員画面 -------------*/
+.exhibit_member,
+.normal_member{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    background-color: rgb(235,241,246);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.exhibit_member p,
+.normal_member p{
+    color: #666666;
+    font-size: 1.6rem;
+    margin-right: 1.5rem;
+    line-height: 0.9;
+}
+.exhibit_member p i,
+.normal_member p i{
+    font-size: 4rem;
+}
+.exhibit_member p span,
+.normal_member p span{
+    font-size: 1.1rem;
+}
+
+.exhibit_member a{
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: rgb(251,0,7) .2rem solid;
+    border-radius: 2%;
+    background-color: rgb(251,0,7);
+    font-weight: bold;
+}
+.exhibit_member a:hover{
+    color: rgb(251,0,7);
+    background-color: #fff;
+}
+
+.normal_member a{
+    color: #fff;
+    font-size: 1.22rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: rgb(36, 113, 247) .2rem solid;
+    border-radius: 2%;
+    background-color: rgb(36, 113, 247);
+    font-weight: bold;
+}
+.normal_member a:hover{
+    color: rgb(36, 113, 247);
+    background-color: #fff;
 }
 
 /* --------- top_page -------------------------------------------------------*/
