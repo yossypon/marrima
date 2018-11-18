@@ -499,18 +499,18 @@ html{
 }
 
 /* 35rem以上43rem以下の環境 */
-@media screen and (min-width:35rem) and (max-width:43rem){
+/*@media screen and (min-width:35rem) and (max-width:43rem){
     .insta_item{
         width: 20rem;
         height: 20rem;
     }
-}
+}*/
 
-/* 35rem以下の環境 */ /* 💡 スマホで見たら大きかったから */
-@media screen and (max-width:35rem){
+/* 64rem以下の環境 */ /* 💡 iPhone7の幅は640px Retina */
+@media screen and (max-width:64rem){
     .insta_item{
-        width: 14rem;
-        height: 14rem;
+        width: 13rem;
+        height: 13rem;
     }
 }
 
@@ -588,18 +588,18 @@ html{
 }
 
 /* 35rem以上43rem以下の環境 */
-@media screen and (min-width:35rem) and (max-width:43rem){
+/*@media screen and (min-width:35rem) and (max-width:43rem){
     .new_item{
         width: 20rem;
         height: 23rem;
     }
-}
+}*/
 
-/* 35rem以下の環境 */ /* 💡 スマホで見たら大きかったから */
-@media screen and (max-width:35rem){
+/* 64rem以下の環境 */ /* 💡 iPhone7の幅は640px */
+@media screen and (max-width:64rem){
     .new_item{
-        width: 14rem;
-        height: 16rem;
+        width: 13rem;
+        height: 15rem;
     }
 }
 
@@ -721,9 +721,9 @@ html{
 }
 
 /* 💡 スマホで見たら文字大きかったから */
-@media screen and (max-width:35rem){
+@media screen and (max-width:64rem){
     .how_page_parts p{
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -783,7 +783,7 @@ html{
 }
 
 /* 💡 スマホで見たら文字大きかったから */
-@media screen and (max-width:35rem){
+@media screen and (max-width:64rem){
     .news_article h3{
         font-size: 1.5rem;
     }
@@ -806,11 +806,11 @@ html{
 .news_contents p{
     font-size: 1.4rem;
     float: right;
-    width:83%;
+    width:81%;
 }
 
 /* 💡 スマホで見たら文字大きかったから */
-@media screen and (max-width:35rem){
+@media screen and (max-width:64rem){
     .news_contents p{
         font-size: 1.2rem;
     }
@@ -854,11 +854,13 @@ footer{
 }
 
 .footer_wrap{
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
+    transform: translateX(1.5rem); /* なぜスマホで見ると中央にいかない？ */
 }
 
 .footer_link{
