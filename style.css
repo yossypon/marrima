@@ -45,7 +45,7 @@ html{
 
 /* --------- top_parts -------------------------------------------------------*/
 .top_parts{
-    /*position: fixed;  ここはjQueryでclassを操作する */
+    /*position: fixed か relative;  ここはjQueryでどちらか選んで付ける */
     width:100vw;
     height: 8.8rem;
     z-index: 1000;
@@ -64,7 +64,7 @@ html{
     align-items: center;
 }
 
-/* --- ハンバーガーメニュー -----------*/
+/* --- ハンバーガーメニュー ---------------------*/
 .head_face_hamburger_menu {
     width: 4rem;
     height: 4rem;
@@ -108,21 +108,21 @@ html{
     -ms-transform: translateY(1.2rem);
     transform: translateY(1.2rem);
 }
+/* hoverではダメ！JSでクリックハンドラにする
 .head_face_hamburger_menu:hover .middle {
   background: rgba(51, 51, 51, 0);
 }
-
 .head_face_hamburger_menu:hover .top {
   -webkit-transform: rotate(-45deg) translateY(0px);
   -ms-transform: rotate(-45deg) translateY(0px);
   transform: rotate(-45deg) translateY(0px);
 }
-
 .head_face_hamburger_menu:hover .bottom {
   -webkit-transform: rotate(45deg) translateY(0px);
   -ms-transform: rotate(45deg) translateY(0px);
   transform: rotate(45deg) translateY(0px);
 }
+*/
 
 /* --- head_face_icon ---------------*/
 .head_face_icon img{
@@ -226,20 +226,22 @@ html{
     padding: 1rem;
 }
 
-/* --------- member_menu -----------------------------------------------------*/
+/* --------- member_menu --------------------------*/
 .member_menu{
-    background-color: pink;
     width: 28rem;
     height: 100vh;
-    position: relative;
-    display: none; /* ここでメニュー有無 */
+    background-color: rgba(249, 249, 249, 0.913);
+    position: absolute;
+    top: 0;
+    left: -28rem; /* この位置指定でtop_partsの左にmember_menuがある状態(通常は見えない)  */
 }
-
+/*
 .member_menu_page{
     position: absolute;
     top: 0;
     left: 0;
 }
+*/
 
 .member_menu_page ul li a{
     font-size: 1.7rem;
@@ -286,9 +288,11 @@ html{
     background-color: #fff;
 }
 
-/* --- page1 会員未登録orログイン画面 ---*/
+/* -- page1 会員未登録orログイン画面 --- */
 .member_menu_page_1{
-    display: none;
+    position: absolute;
+    top: 0;
+    left: -56rem;
 }
 .member_login{
     width: 28rem;
@@ -310,14 +314,19 @@ html{
     background-color: #fff;
 }
 
-/* --- 会員画面 -------------*/
+/* --- 会員画面 --------------------*/
 .member_menu_page_2{
-    display: none;
+    position: absolute;
+    top: 0;
+    left: -28rem;
 }
 .member_menu_page_3{
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0; 
 }
-/* --- page2/page3 一般会員画面 -------------*/
+
+/* --- page2/page3 一般会員画面 ------*/
 .exhibit_member,
 .normal_member{
     width: 28rem;
@@ -379,7 +388,7 @@ html{
     background-image: url(images/top_page_big.jpg);
     background-repeat: no-repeat;
     max-width: 100%;
-    height: 100vh;
+    height: 90vh;
     box-sizing: border-box;
     background-size: cover;
 }
@@ -851,6 +860,7 @@ footer{
     background-color: rgb(235,235,235);
     margin: 2rem 0 0 0;
     padding: 4rem 0 3rem 0;
+    box-sizing: border-box;
 }
 
 .footer_wrap{
