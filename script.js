@@ -1,6 +1,7 @@
-// --- top_partsの動き(スクロールイベント) ---------- //
+// --- top_partsの動き(スクロールイベント) ---------------------------------------------------------------------------- //
    // 上から30px以下の間は何もしない、30px以上進んだらposition:fixed;でtop:0;固定にする
 $(function(){
+    $(".top_parts").css({"position": "relative"});
     $(window).scroll(function(){        
         if($(this).scrollTop() < 30){
             $(".top_parts").css({"position": "relative"});
@@ -11,7 +12,7 @@ $(function(){
 })
 
 
-// --- gnavの動き --------------------------------- //
+// --- gnavの動き --------------------------------------------------------------------------------------------------- //
     // リサイズでやる
     $(window).on('load resize', function(){
         $(".gnav_2nd").hide();
@@ -31,8 +32,8 @@ $(function(){
     })
 
 
-// --- member_menuの動き -------------------------------- //
-// --- ハンバーガーをクリックしたら１秒後にバツ印になる ---
+// --- member_menuの動き ----------------------------------------------------------------------------------------------- //
+// ハンバーガーをクリックしたら１秒後にバツ印になる
 $(function(){
     $(".head_face_hamburger_menu").click(function(){
         $(".head_face_hamburger_menu .middle").css("background","rgba(51, 51, 51, 0)");
@@ -44,20 +45,45 @@ $(function(){
     })
 })
 
-// --- ハンバーガーをクリックしたら左からメニューを持ってくる ---
+// ハンバーガーをクリックしたら左からメニューを持ってくる
 $(function(){
     $(".head_face_hamburger_menu").click(function(){
         $(".top_parts").css("margin-left","280px"); // margin-rightはだめ（自分が動きたいときはmargin-left）
         $(".top_parts").css("transition",".5s");
-
+        $("#glayLayer").css("margin-left","280px");
     })
 })
 
+// グレーレイヤーかける、クリックしたら消す、ハンバーガー戻すなど
+$(function(){
+    $("body").append("<div id='glayLayer'></div>");
+    $("#glayLayer").click(function(){
+        $(this).hide()
+        $(".top_parts").css("margin-left","0px");
+        $(".head_face_hamburger_menu .middle").css("background","#5BBAC7");
+        $(".head_face_hamburger_menu .top").css("transform","rotate(0deg) translateY(-1.2rem)");
+        $(".head_face_hamburger_menu .bottom").css("transform","rotate(0deg) translateY(1.2rem)");
+    });
+    $(".head_face_hamburger_menu").click(function(){
+        setTimeout(function(){
+            $("#glayLayer").fadeIn();
+        },500);
+    })
+})
 
-    
+//上から30pxの間は、メニューを上に30px上にあげる
+$(function(){
+    $(".member_menu").css("top","-30px");
+    $(window).scroll(function(){        
+        if($(this).scrollTop() < 30){
+            $(".member_menu").css("top","-30px");
+        }else{
+            $(".member_menu").css("top","0px");
+        }
+    })
+})
 
-
-// --- new_itemのスライドショー （画像）--------------------- //
+// --- new_itemのスライドショー （画像）------------------------------------------------------------------------------------ //
 $(window).on('load resize', function(){
     var timer = false;
         if (timer !== false){
@@ -92,7 +118,7 @@ $(window).on('load', function(){
 })
 
 
-// --- new_itemのスライドショー （文字）--------------------- //
+// --- new_itemのスライドショー （文字）------------------------------------------------------ //
 $(function(){
     var interval = 3500; 
 	$('.slideshow_p').each(function(){
