@@ -317,3 +317,145 @@ footer{
     padding: 2rem;
     box-sizing: border-box;
 }
+
+/* --- pankuzu --------------------------------------------- */
+.pankuzu{
+    width: 90%;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.pankuzu ul li{
+    display: inline;
+}
+
+.pankuzu ul li a,
+.pankuzu ul li i{
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.pankuzu ul li a span{
+    color: rgb(116, 116, 116);
+}
+
+/* --- register_or_login ------------------------------------- */
+.register_or_login{
+    width: 90%;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.register_or_login h2{
+    font-size: 3rem;
+    color: rgb(130,130,130);
+    overflow: hidden;
+    margin: 0 0 1rem 0;
+}
+
+.button_register{
+    width: 49%;
+    border-top: #D2D2D2 .1rem solid;
+    border-left: #D2D2D2 .1rem solid;
+    border-right: #D2D2D2 .1rem solid;
+    float: left;
+}
+
+.button_login{
+    width: 49%;
+    border-bottom: #D2D2D2 .1rem solid;
+    background-color: #F2F2F2;
+    float: left;
+}
+
+.button_register a,
+.button_login a{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #838383;
+    display: block;
+    padding: 1rem;
+}
+
+.button_register:hover,
+.button_login:hover{
+    background-color: #d2d2d2;
+}
+
+/* --- register ----------------------------------- */
+/* --- login    ----------------------------------- */
+.register,
+.login{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.input_form{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* --- FBボタン ----------- */
+.button_fb{
+    width: 33%;
+    margin: 4rem auto 0 auto;
+    border: #3A61B3 .2rem solid;
+    border-radius: 2%;
+    background-color: #3A61B3;
+}
+
+.button_fb a{
+    text-align: center;
+    font-size: 1.4rem;
+    color: #fff;
+    display: block;
+    padding: 1rem;
+}
+
+.button_fb:hover{
+    background-color: #fff;
+    transition: .5s;
+}
+.button_fb a:hover{
+    color: #3A61B3;
+    transition: .5s;
+}
+
+/* --- 入力フォーム ----------- */
+.input_form{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.input{
+    margin: 2rem 0 0 0;
+}
+
+.input p{
+    color: 666666;
+    font-size: 1.3rem;
+}
+
+.input span{
+    color: #E97263;
+    font-size: 1.2rem;
+}
+
+.input_form_caution{
+    color: #C36362;
+    font-size: 1.2rem;
+}
+
+
+
+
+.input_password a{
+    color: #17599E;
+    float: right;
+}
