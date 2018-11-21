@@ -239,19 +239,14 @@ div#glayLayer{
     color: rgb(54,158,176);
 }
 
-/* -- page1 会員未登録orログイン画面 --- */
-.member_menu_page_1{
-    position: absolute;
-    top: 0;
-    left: 0rem;
-}
-.member_login{
+/* -- 通常会員用画面 --- */
+.normal_member{
     width: 28rem;
     box-sizing: border-box;
     padding: .5rem 1rem;
     border-bottom: .1rem #EFEFEF solid;
 }
-.member_login a{
+.normal_member a{
     color: #fff;
     font-size: 1.5rem;
     display: inline-block;
@@ -260,7 +255,67 @@ div#glayLayer{
     border-radius: 2%;
     background-color: rgb(54,158,176);
 }
-.member_login a:hover{
+.normal_member a:hover{
+    color: rgb(54,158,176);
+    background-color: #fff;
+}
+.normal_member{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    background-color: rgb(235,241,246);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.normal_member p{
+    color: #666666;
+    font-size: 1.6rem;
+    margin-right: 1.5rem;
+    line-height: 0.9;
+}
+.normal_member p i{
+    font-size: 4rem;
+}
+.normal_member p span{
+    font-size: 1.1rem;
+}
+.normal_member a{
+    color: #fff;
+    font-size: 1.22rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: rgb(36, 113, 247) .2rem solid;
+    border-radius: 2%;
+    background-color: rgb(36, 113, 247);
+    font-weight: bold;
+}
+.normal_member a:hover{
+    color: rgb(36, 113, 247);
+    background-color: #fff;
+}
+.member_menu_page ul li:nth-last-child(2){
+    border-top: #848484 0.1rem solid;
+}
+
+.member_menu_page ul li:last-child{
+    border-bottom: #848484 0.1rem solid;
+}
+.member_logout{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+}
+.member_logout a{
+    color: #fff;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    border: rgb(54,158,176) 0.16rem solid;
+    border-radius: 2%;
+    background-color: rgb(54,158,176);
+}
+.member_logout a:hover{
     color: rgb(54,158,176);
     background-color: #fff;
 }
@@ -320,10 +375,9 @@ footer{
 
 /* --- pankuzu --------------------------------------------- */
 .pankuzu{
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     padding: 2rem;
-    margin: 0 auto;
 }
 
 .pankuzu ul li{
@@ -340,170 +394,171 @@ footer{
     color: rgb(116, 116, 116);
 }
 
-/* --- register_or_login ------------------------------------- */
-.register_or_login{
-    width: 90%;
+/* --- section_condition --------------------------------------------- */
+.section_condition{
+    width: 100%;
     box-sizing: border-box;
     padding: 2rem;
-    margin: 0 auto;
 }
 
-.register_or_login h2{
-    font-size: 3rem;
-    color: rgb(130,130,130);
-    overflow: hidden;
-    margin: 0 0 1rem 0;
-}
-
-.button_register{
-    width: 49%;
-    float: left;
-}
-
-.button_login{
-    width: 49%;
-    float: left;
-}
-
-.button_register a,
-.button_login a{
-    text-align: center;
-    font-size: 1.3rem;
-    color: #838383;
-    display: block;
-    padding: 1rem;
-}
-
-/* --- register と login ----------------------------------- */
-.register,
-.login{
+.accordion dt{
     width: 100%;
-    box-sizing: border-box;
-    padding: 2rem 0;
-    margin: 0 auto;
-}
-
-.input_form{
-    width: 100%;
-    overflow: hidden;
-}
-
-/* --- FBボタン ----------- */
-.button_fb{
-    width: 33%;
-    margin: 4rem auto 0 auto;
-    border: #3A61B3 .2rem solid;
-    border-radius: 2%;
-    background-color: #3A61B3;
-}
-
-.button_fb a{
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #fff;
-    display: block;
-    padding: 1rem;
-}
-
-.button_fb:hover{
-    background-color: #fff;
-    transition: .5s;
-}
-.button_fb a:hover{
-    color: #3A61B3;
-    transition: .5s;
-}
-
-/* --- 入力フォーム ----------- */
-.input_form{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2rem 0;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.input{
-    margin: 2rem 0 0 0;
-}
-
-.input p{
-    color: 666666;
-    font-size: 1.3rem;
-}
-
-.input span{
-    color: #E97263;
-    font-size: 1.2rem;
-}
-
-.input_form_caution{
-    color: #C36362;
-    font-size: 1.2rem;
-}
-
-/* --- 利用規約・ポリシー ------ */
-.input_form .rule a{
-    color: #17599E;
-    font-size: 1.1rem;
-}
-
-/* --- パスワード忘れた… ------- */
-.input_form .forget a{
-    color: #17599E;
-    float: right;
-}
-
-/* --- サブミットボタン --------------------------- */
-.button_submit_back{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2rem 0;
-    margin: 0 auto;
     background-color: #EFEFEF;
+    border: #BABABA .1rem solid;
+    box-shadow: .1rem .1rem .1rem .1rem #BABABA;
+    padding: .5rem 1rem ;
     overflow: hidden;
 }
 
-.button_submit{
-    width: 30%;
-    margin: 0 auto;
-    border: #5BBAC7 .2rem solid;
-    border-radius: 2%;
-    background-color: #5BBAC7;
-}
-
-.button_submit a{
-    text-align: center;
+.accordion dt p{
+    float: left;
+    color: #686868;
     font-size: 1.4rem;
-    font-weight: bold;
-    color: #fff;
-    display: block;
-    padding: 1rem 2rem;
 }
 
-.button_submit:hover{
-    background-color: #fff;
-    transition: .5s;
-}
-.button_submit a:hover{
-    color: #5BBAC7;
-    transition: .5s;
-}
-
-/* --- ログイン情報を記憶 ------ */
-.button_submit_back input,
-.button_submit_back p{
-    float:left;
-    font-size: 1.3rem;
-}
-
-.button_submit_back input{
-    vertical-align: bottom;
+.accordion dt i{
+    float: right;
+    color: #686868;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
+.rotate{
+    transform: rotate(180deg);
+}
+
+.accordion dd p{
+    color: rgb(116, 116, 116);
+    font-size: 1.3rem;
+    margin: 1rem 0 0 0;
+}
+.accordion dd hr{
+    margin: 1.5rem 0;
+}
+.condition_price{
+    display: flex;
+    flex-direction: row;
+}
+
+.condition_category li{
+    display: inline-block;
+    margin: 1rem;
+}
+.condition_category li a{
+    color: #376DAB;
+    font-size: 1.2rem;
+}
+
+.condition_sort{
+    border: #BABABA .1rem solid;
+    padding: .5rem;
+    display: inline;
+}
+.condition_sort a{
+    font-size: 1.3rem;
+}
 
 
+/* --- section_items ----------------------------------------------------------------------------- */
+.section_items{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+.items{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4,1fr); /* 1:1:1の意味 */
+    grid-template-columns: repeat(3,1fr); 
+    grid-row-gap:2rem;
+	grid-column-gap:2rem;
+}
 
-/* 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥入力フォームの整形できてない🔥🔥🔥🔥🔥🔥🔥🔥🔥　*/
+.item{
+    background-color: #fff;
+    border: rgb(208,208,208) 0.1rem solid;
+    border-radius: 2%;
+    box-shadow: 1px 1px 1px 1px rgb(208,208,208);
+    cursor: pointer;
+    
+}
+
+.item_pic{
+    object-fit: cover;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.item_pic img{
+    max-width:90%;
+}
+
+.item_title{
+    padding: 1.5rem 0 0.5rem 0.5rem;
+    border-bottom: rgb(118, 118, 118) 0.03rem solid;
+    font-size: 1.4rem;
+    
+}
+
+.item_price{
+    padding: 1rem 0 0 0.5rem;
+    font-size: 1.4rem;
+    
+}
+
+/* --- more ------------------------------------------------------------------------------------ */
+.more{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    text-align: center;
+}
+.more_button{
+    margin: .5rem 0;
+}
+.more_button a{
+    color: #fff;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: .7rem 3rem;
+    border: rgb(54,158,176) 0.16rem solid;
+    border-radius: 2%;
+    background-color: rgb(54,158,176);
+    font-weight: bold;
+}
+.more_button a:hover{
+    color: rgb(54,158,176);
+    background-color: #fff;
+}
+
+/* --- section_number --------------------------------------------------------------------------- */
+.section_number{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.section_number ul li{
+    display: inline;
+    margin: 0 .7rem;
+}
+
+.section_number ul li a{
+    font-size: 1.2rem;
+    color: #686868;
+    padding: .4rem;
+}
+
+.section_number ul li a:hover{
+    background-color: #BABABA;
+    border-radius: 10%;
+}
+
+.section_number ul li:nth-child(2) a{
+    background-color: #07519A;
+    border-radius: 10%;
+    padding: .4rem;
+    color: #fff;
+    font-weight: bold;
+}

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ログイン・会員登録　ウェディング用品専門 お譲りサイト｜マリマ（marrima）</title>
+    <title>衣装 お譲りサイト｜マリマ（marrima）</title>
     <meta name="keywords" content="">
-    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　のログイン・会員登録ページです。">
+    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　の衣装カテゴリページです。">
     <!-- CSS -->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="prepare.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- viewport -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- favicon -->
-    <link href="favicon.ico" rel="shortcut icon" type="favicon.ico">
+    <link href="../favicon.ico" rel="shortcut icon" type="favicon.ico">
     <!-- apple-touch -->
-    <link rel =“apple-touch-icon” href=“apple_touch_icon.PNG”>
-    <link rel="icon" sizes="192x192" href="apple_touch_icon.PNG">
+    <link rel =“apple-touch-icon” href=“../apple_touch_icon.PNG”>
+    <link rel="icon" sizes="192x192" href="../apple_touch_icon.PNG">
     <!-- OGPタグ -->
     <meta property="og:title" content="お譲りサイト｜マリマ（marrima）" />
     <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="login.js"></script>
+    <script src="prepare.js"></script>
 
 </head>
 <body>
@@ -43,7 +43,7 @@
                     <span class="bottom"></span>
                 </div>
                 <div class="head_face_icon">
-                    <a href="#"><img src="images/marrima_icon.jpg"></a>
+                    <a href="#"><img src="../images/marrima_icon.jpg"></a>
                 </div>
                 <div class="head_face_menu">
                     <ul>
@@ -140,107 +140,50 @@
                 </ul>
             </div> <!-- gnav ---------------------------->
     
-            <div class="member_menu"> <!----------------->
+            <div class="member_menu">
                 <div class="member_menu_page">
-                    <div class="member_login"><a href="#">ログイン / 会員登録</a></div>
+                    <div class="normal_member">
+                        <p><!--<img src="#">--><i class="far fa-user-circle"></i></p><p>通常会員<br><span>(本来なら会員名)</span></p>
+                        <a href="#">出品者登録</a>
+                    </div>
                     <ul>
                         <li><a href="#"><i class="fas fa-home"></i>  ホーム</a></li>
+                        <li><a href="#"><i class="far fa-comments"></i>  メッセージ</a></li>
+                        <li><a href="#"><i class="fas fa-clipboard-check"></i>  買ったもの</a></li>
+                        <li><a href="#"><i class="far fa-smile"></i>  レビュー</a></li>
+                        <li><a href="#"><i class="far fa-heart"></i>  お気に入り</a></li>
+                        <li><a href="#"><i class="fas fa-greater-than"></i>  フォロー</a></li>
+                        <li><a href="#"><i class="far fa-user"></i>  ユーザー設定</a></li>
                         <li><a href="#"><i class="far fa-question-circle"></i>  ご利用ガイド</a></li>
                     </ul>
+                    <div class="member_logout"><a href="#">ログアウト</a></div>
                 </div>
-            </div> <!-- member_menu --------------------->
+            </div>
     </div> <!-- top_parts ------------------------------------------------>
 </header>
 
-<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <div class="wrap">
-    <div class="pankuzu"> <!------------------------------------><!-------------------------------------->
+    <div class="pankuzu"> <!------------------------------------>
         <ul>
             <li><a href="#">ホーム</a></a> <i class="fas fa-angle-double-right"></i></li>
             <li><a href="#"><span>ログイン</span></a></li>
         </ul>
     </div>
 
-    <div class="register_or_login"> <!------------------------------------><!-------------------------------------->
-        <h2>新規会員登録</h2>
-        <div class="button_register"><a href="#">会員登録</a></div>
-        <div class="button_login"><a href="#">ログイン</a></div>
-
-        
-        <div class="register"> <!----------------------------------------->
-            <div class="button_fb"><a href="#">FACEBOOK IDで会員登録</a></div>
-
-            <div class="input_form">
-                <div class="input input_email">
-                    <p>Eメール<span>*必須</span></p>
-                    <p class="input_form_caution">※ Eメールで通知を行います。有効なメールアドレスの登録をお願いします。</p>
-                    <input type="">
-                </div>
-                <div class="input input_password">
-                    <p>パスワード<span>*必須</span></p>
-                    <input type="">
-                </div>
-                <div class="input input_password_again">
-                    <p>パスワード（再入力）<span>*必須</span></p>
-                    <input type="">
-                </div>
-                <div class="input input_username">
-                    <p>ユーザー名<span>*必須</span></p>
-                    <p class="input_form_caution">※ ユーザー名は一度登録すると変更できません</p>
-                    <input type="">
-                </div>
-                <div class="input input_anti_spam">
-                    <p>スパム用認証<span>*必須</span></p>
-                    <input type=""><img src=""><img src="">
-                    <p>画像に表示されている英数字を入力してください。</p>
-                </div>
-                <div class="rule">
-                    <a href="#">利用規約</a>
-                    <br><a href="#">プライバシーポリシー</a>
-                </div>
-            </div> <!-- input_form -->
-            <div class="button_submit_back">
-                <div class="button_submit"><a href="#">利用規約に同意して会員登録</a></div>
-            </div>
-        </div> <!-- "register" --> <!----------------------------------------->
-
-        <div class="login"> <!----------------------------------------->
-            <div class="button_fb"><a href="#">FACEBOOK IDでログイン</a></div>
-
-            <div class="input_form">
-                <div class="input input_email">
-                    <p>Eメール</p>
-                    <input type="">
-                </div>
-                <div class="input input_password">
-                    <p>パスワード</p>
-                    <input type="">
-                </div>
-                <div class="forget">
-                    <a href="#">パスワードを忘れました…</a>
-                </div>
-            </div> <!-- input_form -->
-
-            <div class="button_submit_back">
-                <input type="checkbox" ><p>ログイン情報を記憶</p>
-                <div class="button_submit"><a href="#">ログイン</a></div>
-            </div>
-        </div> <!-- "login" --> <!----------------------------------------->
-
-    </div> <!-- "register_or_login" --> <!------------------------------------><!-------------------------------------->
 </div> <!-- wrap -->
 
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-    <!-- footer --------------------------------------------------------------->
-    <footer>
-            <div class="footer_wrap">
-                <div class="footer_link"><a href="#">利用規約</a></div>
-                <div class="footer_link long"><a href="#">プライバシーポリシー</a></div>
-                <div class="footer_link"><a href="#">運営者について</a></div>
-                <div class="footer_link"><a href="#">お問い合わせ</a></div>
-            </div>
-    </footer>
+<footer>
+        <div class="footer_wrap">
+            <div class="footer_link"><a href="#">利用規約</a></div>
+            <div class="footer_link long"><a href="#">プライバシーポリシー</a></div>
+            <div class="footer_link"><a href="#">運営者について</a></div>
+            <div class="footer_link"><a href="#">お問い合わせ</a></div>
+        </div>
+</footer>
 
 </body>
 </html>
