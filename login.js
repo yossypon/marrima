@@ -56,3 +56,59 @@ $(function(){
         },500);
     })
 })
+
+// --- ここから -------------------------------------------------------------------------------------------------- //
+// ボタンクリックで表示する内容切り替え 
+$(function(){
+    $(".login").css("display","none");
+    $(".button_register").click(function(){
+        $(".register").css("display","block");
+        $(".login").css("display","none");
+    })
+    $(".button_login").click(function(){
+        $(".register").css("display","none");
+        $(".login").css("display","block");
+    })
+})
+
+// 表示内容に応じてボタンの配色変更
+
+$(function(){
+    $('.button_register').css({
+        "border-top" : "#D2D2D2 .1rem solid",
+        "border-left" : "#D2D2D2 .1rem solid",
+        "border-right" : "#D2D2D2 .1rem solid"
+    })
+    $('.button_login').css({
+        "border-bottom" : "#D2D2D2 .1rem solid",
+        "background-color" : "#F2F2F2"
+    })
+
+    $('.button_register').click(function(){
+        $('.button_register').css({
+            "border-top" : "#D2D2D2 .1rem solid",
+            "border-left" : "#D2D2D2 .1rem solid",
+            "border-right" : "#D2D2D2 .1rem solid",
+            "border-bottom" : "none",
+            "background-color" : "#FFF"
+        })
+        $('.button_login').css({
+            "border-bottom" : "#D2D2D2 .1rem solid",
+            "background-color" : "#F2F2F2"
+        })
+    })
+
+    $(".button_login").click(function(){
+        $('.button_login').css({
+            "border-top" : "#D2D2D2 .1rem solid",
+            "border-left" : "#D2D2D2 .1rem solid",
+            "border-right" : "#D2D2D2 .1rem solid",
+            "border-bottom" : "none",
+            "background-color" : "#FFF"
+        })
+        $('.button_register').css({
+            "border-bottom" : "#D2D2D2 .1rem solid",
+            "background-color" : "#F2F2F2"
+        })
+    })
+})
