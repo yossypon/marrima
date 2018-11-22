@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>衣装 お譲りサイト｜マリマ（marrima）</title>
+    <title>オーダー お譲りサイト｜マリマ（marrima）</title>
     <meta name="keywords" content="">
-    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　の衣装カテゴリページです。">
+    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　のオーダーカテゴリページです。">
     <!-- CSS -->
-    <link rel="stylesheet" href="prepare.css">
+    <link rel="stylesheet" href="order.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- viewport -->
@@ -28,7 +28,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="prepare.js"></script>
+    <script src="order.js"></script>
 
 </head>
 <body>
@@ -165,10 +165,115 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <div class="wrap">
-    <div class="pankuzu"> <!------------------------------------>
+    <div class="pankuzu"> 
         <ul>
             <li><a href="#">ホーム</a></a> <i class="fas fa-angle-double-right"></i></li>
-            <li><a href="#"><span>ログイン</span></a></li>
+            <li><a href="#"><span>オーダー</span></a></li>
+        </ul>
+    </div>
+
+    <div class="section_condition">
+        <dl class="accordion">
+            <dt><p>絞り込み検索</p><i class="fas fa-angle-up rotate"></i></dt>
+            <dd>
+                <p>価格</p>
+                <div class="condition_price">
+                    <input><p>円 〜 </p><input><p>円</p>
+                </div>
+                <!-- 【スライダー】使い方調べる！ -->
+                <br><input id="range" type="range" min="0" max="100" step="1" onchange="showValue()"/>
+                <hr>
+                <div class="condition_category">
+                    <ul>
+                        <li><a href="#">ペーパーアイテム</a></li>
+                        <li><a href="#">衣装</a></li>
+                        <li><a href="#">挙式・披露宴アイテム</a></li>
+                        <li><a href="#">装飾</a></li>
+                        <li><a href="#">両親へ</a></li>
+                        <li><a href="#">その他</a></li>
+                    </ul>
+                </div>
+                
+                <div class="condition_sort">
+                    <a>並び替え<i class="fas fa-angle-down"></i></a>
+                </div>
+                <hr>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="section_items">
+        <div class="items">
+            <div class="item">
+                <div class="item_pic"><img src="img/order01.jpg"></div>
+                <div class="item_title"><p>テーブルナンバー</p></div>
+                <div class="item_price"><p>700 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order02.jpg"></div>
+                <div class="item_title"><p>ラブストーリーボード</p></div>
+                <div class="item_price"><p>800 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order03.jpg"></div>
+                <div class="item_title"><p>ウェディングツリー</p></div>
+                <div class="item_price"><p>1,000 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order04.jpg"></div>
+                <div class="item_title"><p>芳名帳</p></div>
+                <div class="item_price"><p>360 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order05.jpg"></div>
+                <div class="item_title"><p>子育て感謝状</p></div>
+                <div class="item_price"><p>1,400 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order06.jpg"></div>
+                <div class="item_title"><p>ウェルカムボード</p></div>
+                <div class="item_price"><p>1,500 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order07.jpg"></div>
+                <div class="item_title"><p>芳名帳</p></div>
+                <div class="item_price"><p>400 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order08.jpg"></div>
+                <div class="item_title"><p>青空加工・デザイン加工</p></div>
+                <div class="item_price"><p>1,900 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order09.jpg"></div>
+                <div class="item_title"><p>レターバナー</p></div>
+                <div class="item_price"><p>1,500 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order10.jpg"></div>
+                <div class="item_title"><p>洋風ガーランド</p></div>
+                <div class="item_price"><p>750 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/order11.jpg"></div>
+                <div class="item_title"><p>メッセージスタンド</p></div>
+                <div class="item_price"><p>500 円 （送料別・着払い）</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="more">
+        <div class="more_button"><a href="#">もっと表示</a></div>
+        <p>11 件中 11 件表示</p>
+    </div>
+
+    <hr>
+
+    <div class="section_number">
+        <ul>
+            <li><a href="#">前へ</a></li>
+            <li><a href="#">１</a></li>
+            <li><a href="#">次へ</a></li>
         </ul>
     </div>
 

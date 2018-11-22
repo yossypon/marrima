@@ -59,18 +59,21 @@ $(function(){
 
 // --- ここから -------------------------------------------------------------------------------------------------- //
 $(function(){
+    var flag = 0;
     $('.accordion dd').show();
     $('.accordion dt').css('cursor','pointer');
     $('.accordion dt i').removeClass('rotate');
     $('.accordion dt').click(function(){
         $('.accordion dd').slideToggle();
         
-        if($('.accordion dd').css('display') !== 'none'){
+        if(flag == 0){
             $('.accordion dt i').addClass('rotate');
+            flag=1;
         }else{
             $('.accordion dt i').removeClass('rotate');
+            flag=0;
         }
     });
 });
 
-// 2回目以降が動かないのはなぜか調べる！！！！！！！
+// flag=0がfalseで1がtrueみたいな感じ。「0のときに〜をして1に変える。」を交代にやる

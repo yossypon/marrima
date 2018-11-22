@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>衣装 お譲りサイト｜マリマ（marrima）</title>
+    <title>装飾 お譲りサイト｜マリマ（marrima）</title>
     <meta name="keywords" content="">
-    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　の衣装カテゴリページです。">
+    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　の装飾カテゴリページです。">
     <!-- CSS -->
-    <link rel="stylesheet" href="prepare.css">
+    <link rel="stylesheet" href="decoration.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- viewport -->
@@ -28,7 +28,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="prepare.js"></script>
+    <script src="decoration.js"></script>
 
 </head>
 <body>
@@ -165,10 +165,129 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <div class="wrap">
-    <div class="pankuzu"> <!------------------------------------>
+    <div class="pankuzu"> 
         <ul>
             <li><a href="#">ホーム</a></a> <i class="fas fa-angle-double-right"></i></li>
-            <li><a href="#"><span>ログイン</span></a></li>
+            <li><a href="#"><span>装飾</span></a></li>
+        </ul>
+    </div>
+
+    <div class="section_condition">
+        <dl class="accordion">
+            <dt><p>絞り込み検索</p><i class="fas fa-angle-up rotate"></i></dt>
+            <dd>
+                <p>価格</p>
+                <div class="condition_price">
+                    <input><p>円 〜 </p><input><p>円</p>
+                </div>
+                <!-- 【スライダー】使い方調べる！ -->
+                <br><input id="range" type="range" min="0" max="100" step="1" onchange="showValue()"/>
+                <hr>
+                <div class="condition_category">
+                    <ul>
+                        <li><a href="#">ウェルカムスペース</a></li>
+                        <li><a href="#">会場全体</a></li>
+                        <li><a href="#">高砂</a></li>
+                        <li><a href="#">ゲストテーブル</a></li>
+                        <li><a href="#">フォトブース</a></li>
+                        <li><a href="#">音響</a></li>
+                    </ul>
+                </div>
+                
+                <div class="condition_sort">
+                    <a>並び替え<i class="fas fa-angle-down"></i></a>
+                </div>
+                <hr>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="section_items">
+        <div class="items">
+            <div class="item">
+                <div class="item_pic"><img src="img/deco01.jpg"></div>
+                <div class="item_title"><p>テーブルナンバー</p></div>
+                <div class="item_price"><p>2,880 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco02.jpg"></div>
+                <div class="item_title"><p>芳名帳＊ゲストブック</p></div>
+                <div class="item_price"><p>899 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco03.jpg"></div>
+                <div class="item_title"><p>PENCOクリップボード</p></div>
+                <div class="item_price"><p>1,500 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco04.jpg"></div>
+                <div class="item_title"><p>プチギフト入れ紙袋</p></div>
+                <div class="item_price"><p>999 円 （送料込）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco05.jpg"></div>
+                <div class="item_title"><p>アイアンスターオブジェ</p></div>
+                <div class="item_price"><p>1,222 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco06.jpg"></div>
+                <div class="item_title"><p>芳名帳セット</p></div>
+                <div class="item_price"><p>3,500 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco07.jpg"></div>
+                <div class="item_title"><p>クッション</p></div>
+                <div class="item_price"><p>1,300 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco08.jpg"></div>
+                <div class="item_title"><p>ウェルカムトランク</p></div>
+                <div class="item_price"><p>2,200 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco09.jpg"></div>
+                <div class="item_title"><p>フォトプロップス</p></div>
+                <div class="item_price"><p>400 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco10.jpg"></div>
+                <div class="item_title"><p>キャンドル</p></div>
+                <div class="item_price"><p>500 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco11.jpg"></div>
+                <div class="item_title"><p>コストコ ぬいぐるみ</p></div>
+                <div class="item_price"><p>4,400 円 （送料込）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/deco12.jpg"></div>
+                <div class="item_title"><p>LOVEペン</p></div>
+                <div class="item_price"><p>1,500 円 （送料別・着払い）</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="more">
+        <div class="more_button"><a href="#">もっと表示</a></div>
+        <p>106 件中 12 件表示</p>
+    </div>
+
+    <hr>
+
+    <div class="section_number">
+        <ul>
+            <li><a href="#">前へ</a></li>
+            <li><a href="#">１</a></li>
+            <li><a href="#">２</a></li>
+            <li><a href="#">３</a></li>
+            <li><a href="#">４</a></li>
+            <li><a href="#">５</a></li>
+            <li><a href="#">６</a></li>
+            <li><a href="#">７</a></li>
+            <li><a href="#">８</a></li>
+            <li><a href="#">９</a></li>
+            <li><a href="#">…</a></li>
+            <li><a href="#">次へ</a></li>
         </ul>
     </div>
 

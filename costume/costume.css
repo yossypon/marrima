@@ -440,6 +440,10 @@ footer{
     flex-direction: row;
 }
 
+#range{
+    width: 80vw; /* 🔥🔥🔥　スライダーのデザインについて調べる必要あり　🔥🔥🔥 */
+}
+
 .condition_category li{
     display: inline-block;
     margin: 1rem;

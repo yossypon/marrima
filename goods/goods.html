@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>衣装 お譲りサイト｜マリマ（marrima）</title>
+    <title>グッズ お譲りサイト｜マリマ（marrima）</title>
     <meta name="keywords" content="">
-    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　の衣装カテゴリページです。">
+    <meta name="description" content="ウェディング用品専門 お譲りサイト｜マリマ　のグッズカテゴリページです。">
     <!-- CSS -->
-    <link rel="stylesheet" href="prepare.css">
+    <link rel="stylesheet" href="goods.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- viewport -->
@@ -28,7 +28,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="prepare.js"></script>
+    <script src="goods.js"></script>
 
 </head>
 <body>
@@ -165,10 +165,121 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <div class="wrap">
-    <div class="pankuzu"> <!------------------------------------>
+    <div class="pankuzu"> 
         <ul>
             <li><a href="#">ホーム</a></a> <i class="fas fa-angle-double-right"></i></li>
-            <li><a href="#"><span>ログイン</span></a></li>
+            <li><a href="#"><span>グッズ</span></a></li>
+        </ul>
+    </div>
+
+    <div class="section_condition">
+        <dl class="accordion">
+            <dt><p>絞り込み検索</p><i class="fas fa-angle-up rotate"></i></dt>
+            <dd>
+                <p>価格</p>
+                <div class="condition_price">
+                    <input><p>円 〜 </p><input><p>円</p>
+                </div>
+                <!-- 【スライダー】使い方調べる！ -->
+                <br><input id="range" type="range" min="0" max="100" step="1" onchange="showValue()"/>
+                <hr>
+                <div class="condition_category">
+                    <ul>
+                        <li><a href="#">挙式で使うもの</a></li>
+                        <li><a href="#">披露宴で使うもの</a></li>
+                    </ul>
+                </div>
+                
+                <div class="condition_sort">
+                    <a>並び替え<i class="fas fa-angle-down"></i></a>
+                </div>
+                <hr>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="section_items">
+        <div class="items">
+            <div class="item">
+                <div class="item_pic"><img src="img/goods01.jpg"></div>
+                <div class="item_title"><p>ファーストバイトスプーン</p></div>
+                <div class="item_price"><p>700 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods02.jpg"></div>
+                <div class="item_title"><p>ケーキトッパーセット</p></div>
+                <div class="item_price"><p>3,000 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods03.jpg"></div>
+                <div class="item_title"><p>ケーキトッパー</p></div>
+                <div class="item_price"><p>900 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods04.jpg"></div>
+                <div class="item_title"><p>造花花束</p></div>
+                <div class="item_price"><p>4,000 円(送料別・着払い)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods05.jpg"></div>
+                <div class="item_title"><p>スターシャワー</p></div>
+                <div class="item_price"><p>800 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods06.jpg"></div>
+                <div class="item_title"><p>ケーキトッパー</p></div>
+                <div class="item_price"><p>1,900 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods07.jpg"></div>
+                <div class="item_title"><p>リボンシャワー　リボン</p></div>
+                <div class="item_price"><p>1,000 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods08.jpg"></div>
+                <div class="item_title"><p>リングピロー</p></div>
+                <div class="item_price"><p>1,200 円 （送料別・着払い）</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods09.jpg"></div>
+                <div class="item_title"><p>ミキミニ和風プロップス</p></div>
+                <div class="item_price"><p>1,000 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods10.jpg"></div>
+                <div class="item_title"><p>ダイヤモンドボールペン</p></div>
+                <div class="item_price"><p>1,800 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods11.jpg"></div>
+                <div class="item_title"><p>ハーバリウム</p></div>
+                <div class="item_price"><p>1,500 円 (送料込)</p></div>
+            </div>
+            <div class="item">
+                <div class="item_pic"><img src="img/goods12.jpg"></div>
+                <div class="item_title"><p>ウェディングツリーセット</p></div>
+                <div class="item_price"><p>1,000 円 (送料込)</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="more">
+        <div class="more_button"><a href="#">もっと表示</a></div>
+        <p>64 件中 12 件表示</p>
+    </div>
+
+    <hr>
+
+    <div class="section_number">
+        <ul>
+            <li><a href="#">前へ</a></li>
+            <li><a href="#">１</a></li>
+            <li><a href="#">２</a></li>
+            <li><a href="#">３</a></li>
+            <li><a href="#">４</a></li>
+            <li><a href="#">５</a></li>
+            <li><a href="#">６</a></li>
+            <li><a href="#">次へ</a></li>
         </ul>
     </div>
 
