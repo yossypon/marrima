@@ -876,7 +876,6 @@ footer{
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    transform: translateX(1.5rem); /* なぜスマホで見ると中央にいかない？ */
 }
 
 .footer_link{
@@ -884,6 +883,7 @@ footer{
     transform: translateX(-2rem);
     border-bottom: rgb(152, 152, 152) .1rem solid;
     text-align: center;
+    transform: translateX(.15rem); /* なぜスマホで見ると中央にいかない？ */
 }
 
 .footer_link a{
