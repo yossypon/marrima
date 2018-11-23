@@ -338,6 +338,7 @@ footer{
     margin: 2rem 0 0 0;
     padding: 4rem 0 3rem 0;
     box-sizing: border-box;
+    clear: both; /* これでフロート解除できてるか注意🔥 */
 }
 
 .footer_wrap{
@@ -379,66 +380,31 @@ footer{
     width: 100vw;
     padding: 1rem;
     box-sizing: border-box;
-}
-
-/* --- section_image --------------------------- */
-.section_image{
-    width: 65vw;
-    box-sizing: border-box;
-    padding: 11rem 3rem 3rem 3rem ;
-}
-
-@media screen and (max-width:70rem){
-    .section_image{
-        width: 90%;
-    }
-}
-
-.gallery{
-    width: 100%;
-}
-
-.mainimage > img{
-    max-width: 85%; 
-    vertical-align: bottom;
-}
-
-.gallery ul li{
-    float: left;
-    margin: 1rem 1rem 1rem 0;
-}
-
-.gallery ul li img{
-    max-width: 100%;
-    border: .2rem solid transparent;
-    vertical-align: bottom;
-}
-
-.thumbnails .selected {
-border: .2rem solid #8ac2d0;
-}
-
-.clear{
-	overflow:hidden;
-}
-
-.gallery a{
-    color: #07878C;
-    font-size: 1.6rem;
+    position: relative;
 }
 
 /* --- section_right --------------------------- */
 .section_right{
     width: 35vw;
     box-sizing: border-box;
+    float: right;
+    padding:  0rem 1rem 0 1rem; 
     position: fixed;
-    right: 8rem;
+    right: 2rem;
     top: 12rem;
+    background: yellow;
 }
 
 @media screen and (max-width:70rem){
     .section_right{
-        position: static;
+        width: 100vw;
+        height: 32rem;
+        float: none;
+        position: absolute; /* 🔥🔥🔥🔥🔥　このpositionが効かない理由 🔥🔥🔥🔥🔥 */
+        bottom: 0rem;
+        right: 0rem;
+        background: yellow;
+        
     }
 }
 
@@ -449,22 +415,66 @@ border: .2rem solid #8ac2d0;
     margin: 0 auto 2rem auto;
 }
 
-@media screen and (max-width:70rem){
-    .section_price{
-        width: 50%;
-    }
-}
-
 .price_box{
     background-color: #4F5253;
     width: 100%;
     padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:70rem){
+    .section_price{
+        width: 50%;
+        display: block;
+        margin: 0 auto 2rem auto;
+    }
+    .price_box{
+        justify-content: center;
+    }
 }
 
 .price_box p{
     color: #fff;
     font-weight: bold;
     font-size: 1.7rem;
+    padding-right: 1rem; 
+}
+
+@media screen and (max-width:35rem){
+    .section_price{
+        width: 80%;
+    }
+    .price_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .price_box p{
+        font-size: 1.55rem;
+        padding-bottom: .5rem;
+    }
+}
+
+.square_btn {
+    display: inline-block;
+    text-align: center;
+    padding: .5rem 2rem;
+    color: rgb(46, 46, 46);
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: #fff;
+    border-radius: .4rem;
+    box-shadow: inset 0 .3rem 0 rgba(255,255,255,0.2), inset 0 -0.3rem 0 rgba(0, 0, 0, 0.153);
+    border: solid .2rem #cdcdcd;/*線色*/
+}
+
+.square_btn:active {
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.30);
 }
 
 /* --- section_share --------------------------- */
@@ -477,6 +487,8 @@ border: .2rem solid #8ac2d0;
 @media screen and (max-width:70rem){
     .section_share{
         width: 70%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -485,24 +497,30 @@ border: .2rem solid #8ac2d0;
     width: 100%;
     padding: 2rem;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .share_like{
     width: 50%;
     border: #4F5253 .2rem solid;
-    border-radius: 2%;
-    padding: .5rem 1rem;
-    margin: .5rem auto 1rem auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    border-radius: 3%;
+    padding: .5rem;
+    margin: .7rem auto 1rem auto;
+    display: block;
+    text-align: center;
 }
 
 .share_like a,
 .share_like i{
     color: #4F5253;
     font-size: 1.7rem;
-    display: inline-block;
+    display: inline;
+}
+
+.share_like:hover i,
+.share_like:hover a{
+    color: rgb(211, 16, 68);
+    font-size: 1.8rem;
 }
 
 .share_sns{
@@ -518,6 +536,12 @@ border: .2rem solid #8ac2d0;
 .share_sns ul li{
     display: inline;
     margin: 0 .3rem;
+}
+
+@media screen and (max-width:35rem){
+    .share_sns ul li{
+        margin: 0rem;
+    }
 }
 
 .share_sns a,
@@ -562,7 +586,9 @@ border: .2rem solid #8ac2d0;
 
 @media screen and (max-width:70rem){
     .section_report{
-        width: 80%;
+        width: 70%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -574,4 +600,347 @@ border: .2rem solid #8ac2d0;
 .report_word a{
     color: #838383;
     font-size: 1.4rem;
+}
+
+/* --------------------------------------------- */
+/* --- section_image --------------------------- */
+.section_image{
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 11rem 2rem 3rem 2rem ;
+    float: left;
+}
+
+@media screen and (max-width:70rem){
+    .section_image{
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+.mainimage > img{
+    max-width: 100%; 
+    vertical-align: bottom;
+    text-align: center;
+}
+
+@media screen and (max-width:70rem){
+    .mainimage > img{
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+.section_image ul li{
+    float: left;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.section_image ul li img{
+    max-width: 100%;
+    border: .2rem solid transparent;
+    vertical-align: bottom;
+}
+
+@media screen and (max-width:40rem){
+    .section_image{
+        padding: 11rem 1rem 3rem 1rem ;
+    }
+    .section_image ul li img{
+        width:7rem;
+    }
+    .section_image ul li{
+        margin: 1rem .5rem 1rem 0;
+    }
+}
+
+.thumbnails .selected {
+border: .2rem solid #8ac2d0;
+}
+
+.clear{
+	overflow:hidden;
+}
+
+.section_image a{
+    color: #07878C;
+    font-size: 1.6rem;
+}
+
+/* --- section_title --------------------------- */
+.section_title{
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 2rem 3rem 2rem 3rem ;
+    float: left;
+}
+
+@media screen and (max-width:70rem){
+    .section_title{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+.section_title h2{
+    color: black;
+    font-size: 3.3rem;
+    border-top: #DBDBDB .1rem solid; 
+    padding-top: 2rem;
+    border-bottom: #DBDBDB .1rem solid; 
+    padding-bottom: 2rem;
+}
+
+/* --- section_detail --------------------------- */
+.section_detail{
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 2rem 3rem 2rem 3rem ;
+    float: left;
+}
+
+@media screen and (max-width:70rem){
+    .section_detail{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+.section_detail h3{
+    color: rgb(74, 74, 74);
+    font-size: 2.3rem;
+}
+
+.section_detail p{
+    color: #767676;
+    font-size: 1.6rem;
+}
+
+#section_detail_show{
+    color: #3d6ced;
+    cursor: pointer;
+}
+
+#section_detail_hide{
+    color: #3d6ced;
+    cursor: pointer;
+    display: none;
+}
+
+/* --- section_note --------------------------- */
+.section_note{
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 2rem 3rem 2rem 3rem ;
+    float: left;
+}
+
+@media screen and (max-width:70rem){
+    .section_note{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+.section_note h3{
+    color: rgb(74, 74, 74);
+    font-size: 2.3rem;
+    border-top: #DBDBDB .1rem solid; 
+    padding-top: 2rem;
+}
+
+.section_note p{
+    color: #767676;
+    font-size: 1.6rem;
+}
+
+/* --- section_review --------------------------- */
+.section_review{
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 2rem 3rem 2rem 3rem ;
+    float: left;
+}
+
+@media screen and (max-width:70rem){
+    .section_review{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+.section_review h3{
+    color: rgb(74, 74, 74);
+    font-size: 2.3rem;
+    border-top: #DBDBDB .1rem solid; 
+    padding-top: 2rem;
+}
+
+.section_review p{
+    color: #767676;
+    font-size: 1.6rem;
+}
+
+.section_review p i{
+    color: #ECBC1C;
+}
+
+/* レビューコメント */
+.section_review_comment{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: #DBDBDB .1rem solid; 
+}
+
+.section_review_comment_upper{
+    display: flex;
+    flex-direction: row; 
+}
+
+.section_review_comment_upper .fa-user-circle{
+    font-size: 4rem;
+    color: #434343;
+    padding-right: 1rem; 
+}
+
+.section_review_comment_upper p span{
+    font-weight: bold;
+}
+
+.section_review_comment_upper p{
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.section_review_comment_upper .rating{
+    color: #ECBC1C;
+    font-size: 1.6rem;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.section_review_comment_lower{
+    padding-top: 1rem;
+}
+
+.review_more_1,
+.review_more_2{
+    text-align: center;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.more_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #5BBAC6;/*ボタン色*/
+    color: #FFF;
+    font-size: 1.5rem;
+    border-bottom: solid 4px rgb(51, 130, 140);
+    border-radius: 3px;
+}
+.more_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+.review_second{
+    display: none;
+}
+
+.review_third{
+    display: none;
+}
+
+
+/* --- section_seller --------------------------- */
+.section_seller{
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 2rem 3rem 7rem 3rem ;
+    float: left;
+}
+
+@media screen and (max-width:70rem){
+    .section_seller{
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+.section_seller_upper{
+    width: 100%;
+}
+
+.section_seller_left{
+    float: left;
+}
+
+.section_seller_left h3{
+    color: rgb(74, 74, 74);
+    font-size: 2.3rem;
+}
+
+.section_seller_left p{
+    color: #767676;
+    font-size: 1.6rem;
+}
+
+.section_seller_rate{
+    display: flex;
+    flex-direction: row;
+}
+
+.section_seller_rate i{
+    color: #ECBC1C;
+    font-size: 1.6rem;
+}
+
+.section_seller_rate p{
+    color: #666666;
+    font-size: 1.45rem;
+}
+
+.section_seller_upper img{
+    float: right;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.section_seller_message{
+    clear: both;
+    width: 100%;
+    text-align: center;
+    transform: translateY(2rem);
+}
+
+.section_seller_message a{
+    padding: 1rem 2.5rem;
+    background-color: #B4BE4E;
+    border: #B4BE4E .2rem solid;
+    border-bottom: rgb(137, 145, 47) .3rem solid;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.section_seller_message a:hover{
+    background-color: #fff;
+    color: #B4BE4E;
+    border-bottom: #B4BE4E .2rem solid;
+    border: #B4BE4E .3rem solid;
 }

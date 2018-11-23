@@ -58,6 +58,9 @@ $(function(){
 })
 
 // --- ここから -------------------------------------------------------------------------------------------------- //
+
+
+// イメージギャラリー
 $(function(){
     $('.thumbnails li').on('click',function(){
         $('.thumbnails li').removeClass('selected');
@@ -67,3 +70,49 @@ $(function(){
         return false;    	
     })
 })
+
+
+// 続きを読む、閉じる
+$(function(){
+    $("#section_detail_show").on("click",function(){
+        $(this).after("<span><p>100均のものです。3,4枚目参照。(不要であれば廃棄していただいてOKです)</p><br><p>③ドライフラワー</P><p>基本的には写真の状態のままお送りします。梱包すると花の厚みは押しつぶされてしまう可能性が高く、ドライフラワーは【おまけ】としてお考えください。お好きなお花に変えていただいても問題ありません✨<br>※ただし糸と釘の強度に気をつけてください。素人作品ですので強度は保証いたしかねます。発送後(輸送時含む)に糸や釘が取れてしまった場合は、ご自身で修復をお願いいたします。</p><br><p>その他、挙式後に修正を加えた箇所や傷がついている箇所の説明など、写真付きでInstagramに投稿してますので、詳細確認の上ご検討ください*</p></span>");
+        $(this).css("display","none");
+        $("#section_detail_hide").css("display","block");
+    })
+    $("#section_detail_hide").on("click",function(){
+        $(".section_detail span p").remove();
+        $("#section_detail_show").css("display","block");
+        $(this).css("display","none");
+    })
+})
+
+
+// レビューを表示①②
+$(function(){
+    $(".review_more_2").css("display","none");
+    $(".review_more_1").click(function(){
+        $(".review_second").css("display","block");
+        $(".review_more_1").css("display","none");
+        $(".review_more_2").css("display","block");
+    })
+    $(".review_more_2").click(function(){
+        $(".review_third").css("display","block");
+        $(".review_more_2").css("display","none");
+    })
+})
+
+
+// 幅700px以下でsection_rightをボトムに持ってくる
+/*
+$(window).on('load resize', function(){
+    var w = $(window).width();
+    var x = 701; // 700pxがiPhone7の画面サイズ
+    if(w < x){
+        $(".section_right").css({
+            "position":"absolute",
+            "right":"0",
+            "bottom":"0"
+        })
+    }
+})
+*/
