@@ -1,0 +1,416 @@
+@charset "utf-8";
+html{
+    font-size: 62.5%;
+}
+*{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------- top_parts -------------------------------------------------------*/
+.header{
+    position: relative;
+}
+
+.top_parts{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height: 8.8rem;
+    z-index: 1000;
+}
+
+/* --- head_face -------------------------------*/
+.head_face{
+    width: 100%;
+    height: 4.4rem;
+    box-sizing: border-box; 
+    background-color: #5BBAC7;
+    padding: .2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- ハンバーガーメニュー ---------------------*/
+.head_face_hamburger_menu {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2%;
+    background-color:#fff;
+    position: relative;
+    margin: 0 1rem;
+}
+
+.head_face_hamburger_menu span {
+    width: 2.6rem;
+    height: 0.3rem;
+    display: block;
+    background-color: #5BBAC7;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.3rem;
+    margin-top: -0.1rem;
+}
+
+.head_face_hamburger_menu span {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.head_face_hamburger_menu .middle {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.head_face_hamburger_menu .top {
+    -webkit-transform: translateY(-1.2rem);
+    -ms-transform: translateY(-1.2rem);
+    transform: translateY(-1.2rem);
+}
+
+.head_face_hamburger_menu .bottom {
+    -webkit-transform: translateY(1.2rem);
+    -ms-transform: translateY(1.2rem);
+    transform: translateY(1.2rem);
+}
+
+.head_face_hamburger_menu:hover .top {
+  -webkit-transform: translateX(-.3rem) translateY(-1.1rem);
+  -ms-transform: translateX(-.3rem) translateY(-1.1rem);
+  transform: translateX(-.3rem) translateY(-1.1rem);
+}
+.head_face_hamburger_menu:hover .middle {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+}
+.head_face_hamburger_menu:hover .bottom {
+  -webkit-transform: translateX(.3rem) translateY(1.3rem);
+  -ms-transform: translateX(.3rem) translateY(1.3rem);
+  transform: translateX(.3rem) translateY(1.3rem);
+}
+
+/* --- head_face_icon ---------------*/
+.head_face_icon img{
+    max-width: 4rem;
+    transform: translateX(3rem);
+    vertical-align: bottom;
+}
+
+/* --- head_face_menu ---------------*/
+.head_face_menu ul{
+    margin:0;
+    padding: 0;
+    height: 4rem;
+    
+}
+.head_face_menu li{
+    display: inline;
+    margin: 0 1rem;
+    line-height: 4rem;
+}
+
+.head_face_menu li a{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.head_face_menu li a:hover{
+    color: rgba(255, 255, 255, 0.700);
+}
+
+.head_face_menu li i{
+    vertical-align: middle;
+}
+
+/* --- gnav ---------------------------------------*/
+.gnav{
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: #EFEFEF;
+}
+
+.gnav_1st_stage a{
+    color:#666666;
+    font-size: 1.4rem;
+    text-align: center;
+    display: block;
+}
+
+
+/* 45rem以下の環境 */
+@media screen and (max-width:45rem){
+    .gnav_1st_stage a{
+        font-size: 1.1rem;
+    }
+}
+
+.gnav a:hover{
+    color: #5BBAC7;
+}
+
+.gnav_1st_stage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height:4.4rem;
+}
+
+.gnav_1st_stage>li{
+    width: 15%;
+    padding: 1rem;
+    z-index: 2000;
+}
+
+/* --------- member_menu --------------------------*/
+.member_menu{
+    width: 28rem;
+    height: 100vh;
+    background-color: rgba(249, 249, 249, 0.955);
+    position: absolute;
+    top: 0;
+    left: -28rem;
+}
+div#glayLayer{
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background:rgb(77, 75, 75);
+	filter:alpha(opacity=60);
+    opacity: 0.60;
+    z-index: 10000;
+}
+
+.member_menu_page ul li a{
+    font-size: 1.7rem;
+    color: #666666;
+    display: block;
+    width: 28rem;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+}
+
+.member_menu_page ul li a:hover{
+    background-color: rgb(235,241,246);
+}
+
+.member_menu_page ul li a .fas,
+.member_menu_page ul li a .far{
+    color: rgb(54,158,176);
+}
+
+/* -- 通常会員用画面 --- */
+.normal_member{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    border-bottom: .1rem #EFEFEF solid;
+}
+.normal_member a{
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: rgb(54,158,176) .2rem solid;
+    border-radius: 2%;
+    background-color: rgb(54,158,176);
+}
+.normal_member a:hover{
+    color: rgb(54,158,176);
+    background-color: #fff;
+}
+.normal_member{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    background-color: rgb(235,241,246);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.normal_member p{
+    color: #666666;
+    font-size: 1.6rem;
+    margin-right: 1.5rem;
+    line-height: 0.9;
+}
+.normal_member p i{
+    font-size: 4rem;
+}
+.normal_member p span{
+    font-size: 1.1rem;
+}
+.normal_member a{
+    color: #fff;
+    font-size: 1.22rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: rgb(36, 113, 247) .2rem solid;
+    border-radius: 2%;
+    background-color: rgb(36, 113, 247);
+    font-weight: bold;
+}
+.normal_member a:hover{
+    color: rgb(36, 113, 247);
+    background-color: #fff;
+}
+.member_menu_page ul li:nth-last-child(2){
+    border-top: #848484 0.1rem solid;
+}
+
+.member_menu_page ul li:last-child{
+    border-bottom: #848484 0.1rem solid;
+}
+.member_logout{
+    width: 28rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+}
+.member_logout a{
+    color: #fff;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    border: rgb(54,158,176) 0.16rem solid;
+    border-radius: 2%;
+    background-color: rgb(54,158,176);
+}
+.member_logout a:hover{
+    color: rgb(54,158,176);
+    background-color: #fff;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------- */
+
+body{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 10rem 0 10rem 0;
+}
+
+.wrap{
+    width: 95%;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    background-color: #EFF3F7;
+}
+
+/* コメント欄 */
+
+/*以下、①背景色など*/
+.line-bc {
+    padding: 2rem 1rem;
+    max-width: 45rem;
+    margin: 1.5rem auto;
+    text-align: right;
+    font-size: 1.4rem;
+    background: #EFF3F7;
+  }
+  
+  /*以下、②左側のコメント*/
+  .balloon6 {
+      width: 100%;
+      margin: 1rem 0;
+      overflow: hidden;
+  }
+  
+  .balloon6 .faceicon {
+      float: left;
+      margin-right: -5rem;
+      width: 4rem;
+  }
+  
+  .balloon6 .faceicon img{
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+  }
+  .balloon6 .chatting {
+      width: 100%;
+      text-align: left;
+  }
+  .says {
+      display: inline-block;
+      position: relative; 
+      margin: 0 0 0 5rem;
+      padding: 1rem;
+      max-width: 25rem;
+      border-radius: 1.2rem;
+      background: #ffffff;
+  }
+  
+  .says:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: .3rem; 
+      left: -1.9rem;
+      border: .8rem solid transparent;
+      border-right: 1.8rem solid #ffffff;
+      -ms-transform: rotate(35deg);
+      -webkit-transform: rotate(35deg);
+      transform: rotate(35deg);
+  }
+  .says p {
+      margin: 0;
+      padding: 0;
+  }
+  
+  /*以下、③右側の緑コメント*/
+  .mycomment {
+      margin: 1rem 0;
+  }
+  .mycomment p{
+      display: inline-block;
+      position: relative; 
+      margin: 0 1rem 0 0;
+      padding: .8rem;
+      max-width: 25rem;
+      border-radius: 1.2rem;
+      background: rgba(162, 230, 239, 0.872);
+      font-size: 1.5rem;
+      text-align: left;
+  }
+  
+  .mycomment p:after {
+      content: "";
+      position: absolute;
+      top: .3rem; 
+      right: -1.9rem;
+      border: .8rem solid transparent;
+      border-left: 1.8rem solid rgba(162, 230, 239, 0.872);
+      -ms-transform: rotate(-35deg);
+      -webkit-transform: rotate(-35deg);
+      transform: rotate(-35deg);
+  }
+  
+/* 下部メッセージ送信スペース */
+
+.sending{
+    width: 100vw;
+    height: 8.8rem;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
