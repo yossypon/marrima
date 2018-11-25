@@ -58,3 +58,42 @@ $(function(){
 })
 
 // --- ここから -------------------------------------------------------------------------------------------------- //
+
+// タブ
+$(function(){
+    $("#tab li a").click(function () {
+        $("#tab li a").removeClass();
+        $(this).addClass("selected");
+        // ぴったりのところに飛べるようにコントロールしたい
+        // 現在地をタブに色付けしてわかるようにしたい
+    });
+    $(window).scroll(function(){
+        $("#tab li a").removeClass();
+    });
+});
+
+
+// 商品をもっと表示
+$(function(){
+    $(".list_more").css("display","none");
+    $(".list_more_btn").click(function(){
+        $(".list_more").css("display","flex");
+        $(this).css("display","none");
+    })
+})
+
+
+
+// レビューを表示①②
+$(function(){
+    $(".review_more_2").css("display","none");
+    $(".review_more_1").click(function(){
+        $(".review_second").css("display","block");
+        $(".review_more_1").css("display","none");
+        $(".review_more_2").css("display","block");
+    })
+    $(".review_more_2").click(function(){
+        $(".review_third").css("display","block");
+        $(".review_more_2").css("display","none");
+    })
+})
