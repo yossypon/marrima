@@ -677,7 +677,7 @@ footer{
     font-size: 1.6rem;
 }
 
-#review i{
+#review>p>i{
     color: #ECBC1C;
     font-size: 1.6rem;
 }

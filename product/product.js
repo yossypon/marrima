@@ -101,18 +101,3 @@ $(function(){
     })
 })
 
-
-// 幅700px以下でsection_rightをボトムに持ってくる
-/*
-$(window).on('load resize', function(){
-    var w = $(window).width();
-    var x = 701; // 700pxがiPhone7の画面サイズ
-    if(w < x){
-        $(".section_right").css({
-            "position":"absolute",
-            "right":"0",
-            "bottom":"0"
-        })
-    }
-})
-*/
