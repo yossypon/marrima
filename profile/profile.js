@@ -71,14 +71,16 @@ $(function(){
         var myOffset = $($(this).attr('href')).offset().top;
         var space = -80;
         $('html,body').animate({ scrollTop:myOffset + space}, 500);
-        return false
+        return false;
     });
     
     // 現在地をタブに色付けしてわかるようにしたい
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
+        setTimeout(function(){
+        if ($(this).scrollTop() > 0) {
             $("#tab li a").removeClass();
         }
+    },1500);
     });
 });
 
