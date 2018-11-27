@@ -84,7 +84,58 @@ $(function(){
 })
 
 
-// いま出品者の画面だけになってるから会員登録と通常会員のページ展開は別途作る必要あり。
+// --- Instagram_Itemsのカルーセル --------------------------------------------------------------------------------------- //
+$(function(){
+    //ページングの設定
+    $("#slide li").each(function(){
+        $("#paging").append($("<li></li>").attr("data-img",$("img",this).attr("src")));
+    });
+    $("#paging li:first-child").addClass("active");
+    
+    //自動スライドの実行
+    var timerId = setInterval(function(){
+        $("#nav .next").click();
+    },5000);
+    
+    //自動スライドの制御
+    $("#slideGalley").hover(function(){
+        $("#nav").show();
+        clearInterval(timerId);
+    },function(){
+        $("#nav").hide()
+        timerId = setInterval(function(){
+            $("#nav .next").click();
+        },5000);
+    });
+    
+    //右矢印ボタンが押された際の挙動
+    $("#nav .next").click(function(){
+        $("#slide:not(:animated)").animate({
+            "margin-left" : -1*$("#slide li").width()
+        },function(){
+            $("#slide").css("margin-left","0");
+            $("#slide li:first-child").appendTo('#slide');
+            $("#paging li.active").removeClass("active");
+            $("#paging li[data-img='"+$("#slide li:first-child img").attr("src")+"']").addClass("active")
+        });
+    });
+    
+    //左矢印ボタンが押された際の挙動
+    $("#nav .prev").click(function(){
+        $("#slide:not(:animated)")
+            .css("margin-left",-1*$("#slide li").width());
+            $("#slide li:last-child").prependTo('#slide');
+        $("#slide:not(:animated)")
+            .animate({
+            "margin-left" : 0
+        },function(){
+            $("#paging li.active").removeClass("active");
+            $("#paging li[data-img='"+$("#slide li:first-child img").attr("src")+"']").addClass("active")
+        });
+    });
+    });
+
+    
 
 // --- new_itemのスライドショー （画像）------------------------------------------------------------------------------------ //
 $(window).on('load resize', function(){
