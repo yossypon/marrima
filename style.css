@@ -544,11 +544,11 @@ div#glayLayer{
 	height: 2rem;
     background: url(./images/page.png);
     margin: 0 .4rem 0 0;
-    transform: translateY(1rem);
+    transform: translateY(.5rem);
 }
 #paging li.active{
     background: url(./images/page_active.png);
-    transform: translateY(1rem);
+    transform: translateY(.5rem);
 }
 #nav{
 	display: none;
@@ -856,7 +856,7 @@ div#glayLayer{
     padding: .5rem;
 }
 
-.news_article h3{
+.news_article h3 a{
     font-size: 1.8rem;
     color: rgb(89, 89, 89);
     margin: 1rem 0;
@@ -864,7 +864,7 @@ div#glayLayer{
 
 /* 💡 スマホで見たら文字大きかったから */
 @media screen and (max-width:64rem){
-    .news_article h3{
+    .news_article h3 a{
         font-size: 1.5rem;
     }
 }
@@ -883,15 +883,16 @@ div#glayLayer{
     margin-right: 0.5rem;
 }
 
-.news_contents p{
+.news_contents p a{
     font-size: 1.4rem;
     float: right;
     width:81%;
+    color: rgb(89, 89, 89);
 }
 
 /* 💡 スマホで見たら文字大きかったから */
 @media screen and (max-width:64rem){
-    .news_contents p{
+    .news_contents p a{
         font-size: 1.2rem;
     }
 }

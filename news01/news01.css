@@ -403,9 +403,10 @@ footer{
 /* --- article --------------------------------------------- */
 
 .article{
-    width: 70%;
+    width: 65%;
     box-sizing: border-box;
     padding: 0rem;
+    margin-left: 3rem;
     float: left;
 }
 
@@ -413,6 +414,7 @@ footer{
     .article{
         width: 100%;
         padding: 2rem;
+        margin: 0;
         float: none;
     }
 }
@@ -470,7 +472,7 @@ footer{
 .news_wrap{
     background-color: rgb(235,235,235);
     margin: 0 auto;
-    width: 88%;
+    width: 95%;
     padding: 2rem 0 .2rem 0;
 }
 
@@ -482,7 +484,7 @@ footer{
     padding: .5rem;
 }
 
-.news_article h4{
+.news_article h4 a{
     font-size: 1.8rem;
     color: rgb(89, 89, 89);
     margin: 1rem 0;
@@ -490,7 +492,7 @@ footer{
 
 /* 💡 スマホで見たら文字大きかったから */
 @media screen and (max-width:64rem){
-    .news_article h3{
+    .news_article h4 a{
         font-size: 1.5rem;
     }
 }
@@ -509,15 +511,16 @@ footer{
     margin-right: 0.5rem;
 }
 
-.news_contents p{
+.news_contents p a{
     font-size: 1.4rem;
     float: right;
     width:81%;
+    color: rgb(89, 89, 89);
 }
 
 /* 💡 スマホで見たら文字大きかったから */
 @media screen and (max-width:64rem){
-    .news_contents p{
+    .news_contents p a{
         font-size: 1.2rem;
     }
 }

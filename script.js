@@ -95,7 +95,7 @@ $(function(){
     //自動スライドの実行
     var timerId = setInterval(function(){
         $("#nav .next").click();
-    },5000);
+    },3500);
     
     //自動スライドの制御
     $("#slideGalley").hover(function(){
@@ -105,7 +105,7 @@ $(function(){
         $("#nav").hide()
         timerId = setInterval(function(){
             $("#nav .next").click();
-        },5000);
+        },3500);
     });
     
     //右矢印ボタンが押された際の挙動
@@ -135,7 +135,7 @@ $(function(){
     });
     });
 
-    
+
 
 // --- new_itemのスライドショー （画像）------------------------------------------------------------------------------------ //
 $(window).on('load resize', function(){
