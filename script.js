@@ -98,15 +98,17 @@ $(function(){
     },3500);
     
     //自動スライドの制御
+    
     $("#slideGalley").hover(function(){
         $("#nav").show();
         clearInterval(timerId);
     },function(){
-        $("#nav").hide()
+        //$("#nav").hide()
         timerId = setInterval(function(){
             $("#nav .next").click();
         },3500);
     });
+    
     
     //右矢印ボタンが押された際の挙動
     $("#nav .next").click(function(){

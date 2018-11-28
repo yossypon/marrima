@@ -321,6 +321,12 @@ footer{
     margin: 0 auto;
 }
 
+@media screen and (max-width:70rem){
+    .pankuzu{
+        width:100%;
+    }
+}
+
 .pankuzu ul li{
     display: inline;
 }
@@ -341,6 +347,12 @@ footer{
     box-sizing: border-box;
     padding: 2rem;
     margin: 0 auto;
+}
+
+@media screen and (max-width:70rem){
+    .register_or_login{
+        width: 100%;
+    }
 }
 
 .register_or_login h2{
@@ -399,6 +411,12 @@ footer{
     color: #fff;
     display: block;
     padding: 1rem;
+}
+
+@media screen and (max-width:70rem){
+    .button_fb{
+        width: 55%;
+    }
 }
 
 .button_fb:hover{
@@ -518,6 +536,12 @@ input{
     padding: 1rem 2rem;
 }
 
+@media screen and (max-width:70rem){
+    .button_submit{
+        width: 80%;
+    }
+}
+
 .button_submit:hover{
     background-color: #fff;
     transition: .5s;
@@ -528,10 +552,14 @@ input{
 }
 
 /* --- ログイン情報を記憶 ------ */
-.button_submit_back input,
-.button_submit_back p{
-    float:left;
+.memory input{
+    width: 2rem;
+    float: left;
+}
+
+.memory p{
     font-size: 1.3rem;
+    line-height: 2.1;
 }
 
 .button_submit_back input{
@@ -542,4 +570,4 @@ input{
 
 
 
-/* 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥入力フォームの整形できてない🔥🔥🔥🔥🔥🔥🔥🔥🔥　*/
+/* 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥入力フォームの機能付けできてない🔥🔥🔥🔥🔥🔥🔥🔥🔥　*/

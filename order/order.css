@@ -479,6 +479,16 @@ footer{
 	grid-column-gap:2rem;
 }
 
+@media screen and (max-width:70rem){
+    .section_items{
+        padding: .2rem;
+    }
+    .items{
+        grid-row-gap: 1.1rem;
+        grid-column-gap: .4rem;
+    }
+}
+
 .item{
     background-color: #fff;
     border: rgb(208,208,208) 0.1rem solid;
@@ -502,13 +512,24 @@ footer{
     padding: 1.5rem 0 0.5rem 0.5rem;
     border-bottom: rgb(118, 118, 118) 0.03rem solid;
     font-size: 1.4rem;
-    
+    color: #454545;
 }
 
 .item_price{
     padding: 1rem 0 0 0.5rem;
     font-size: 1.4rem;
-    
+    color: #454545;
+}
+
+@media screen and (max-width:70rem){
+    .item_title{
+        padding: .5rem 0 .5rem .5rem;
+        font-size: 1.1rem;
+    }
+    .item_price{
+        padding: .5rem 0 0 .5rem;
+        font-size: 1.1rem;
+    }
 }
 
 /* --- more ------------------------------------------------------------------------------------ */
@@ -546,6 +567,15 @@ footer{
 .section_number ul li{
     display: inline;
     margin: 0 .7rem;
+}
+
+@media screen and (max-width:70rem){
+    .section_number{
+        padding: 2rem 0;
+    }
+    .section_number ul li{
+        margin:0 .1rem;
+    }
 }
 
 .section_number ul li a{

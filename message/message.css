@@ -425,22 +425,21 @@ body{
     border-bottom-left-radius: 2.5rem 3.5rem;
 }
 
-@media screen and (max-width:40rem){
-    .back a{
-        padding:2.5rem 0.5rem;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-}
-
 .content input{
     width: 27rem;
     height: 6.4rem;
 }
 
-@media screen and (max-width:35rem){
+@media screen and (max-width:70rem){
+    .back a{
+        font-size: 1.3rem;
+        padding:2.5rem 0.5rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
     .content input{
-        width: 25rem;
+        width: 23rem;
+        height: 6.0rem;
     }
 }
 
@@ -453,9 +452,10 @@ body{
     border: #fff .1rem solid;
 }
 
-@media screen and (max-width:35rem){
+@media screen and (max-width:70rem){
     .attachment a{
-        padding:2.3rem 0.2rem;
+        font-size: 1.7rem;
+        padding:2.3rem 0.5rem;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
@@ -472,8 +472,9 @@ body{
     border-bottom-right-radius: 2.5rem 3.5rem;
 }
 
-@media screen and (max-width:35rem){
+@media screen and (max-width:70rem){
     .go a{
+        font-size: 1.3rem;
         padding:2.5rem 0.5rem;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;

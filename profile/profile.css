@@ -245,6 +245,11 @@ div#glayLayer{
     box-sizing: border-box;
     padding: .5rem 1rem;
     border-bottom: .1rem #EFEFEF solid;
+    background-color: rgb(235,241,246);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
 }
 .normal_member a{
     color: #fff;
@@ -259,15 +264,7 @@ div#glayLayer{
     color: rgb(54,158,176);
     background-color: #fff;
 }
-.normal_member{
-    width: 28rem;
-    box-sizing: border-box;
-    padding: .5rem 1rem;
-    background-color: rgb(235,241,246);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 .normal_member p{
     color: #666666;
     font-size: 1.6rem;
@@ -378,7 +375,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    z-index: 1000;
+    z-index: 10;
     position: fixed;
     top: 9rem;
     left: 0;
@@ -735,6 +732,7 @@ footer{
     border: #DBDBDB .2rem solid;
     margin-right: 1rem;
     cursor: pointer; 
+    max-width: 100%;
 }
 
 .review_more_1,

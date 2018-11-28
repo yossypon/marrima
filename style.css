@@ -522,8 +522,6 @@ div#glayLayer{
     }
 }
 
-
-
 #slide{
 	width:10000rem;
 }
@@ -551,7 +549,7 @@ div#glayLayer{
     transform: translateY(.5rem);
 }
 #nav{
-	display: none;
+	display: block; /* 初めから表示させとくことにする */ 
 }
 #nav .prev{
 	position: absolute;
@@ -610,6 +608,7 @@ div#glayLayer{
 .insta_item p{
     font-size: 1.5rem;
     margin: 0.1rem 0 0.5rem 0.5rem;
+    color: rgb(55,55,55);
 }
 
 .insta_item_parts2{
@@ -665,6 +664,7 @@ div#glayLayer{
 .new_item p{
     font-size: 10%;
     margin: 0.1rem 0 0.5rem 0.5rem;
+    color: rgb(55, 55, 55);
 }
 
 /* 35rem以上43rem以下の環境 */
