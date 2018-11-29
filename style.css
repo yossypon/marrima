@@ -1005,6 +1005,13 @@ footer{
     display: none;
 }
 
+@media screen and (max-width: 70rem){
+    .logout{
+        top: 15%;
+        left: -2%;
+    }
+}
+
 .logout p{
     font-size: 1.6rem;
     color: #ffffff;
