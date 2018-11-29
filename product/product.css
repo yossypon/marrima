@@ -404,7 +404,7 @@ footer{
 @media screen and (max-width:70rem){
     .section_right{
         width: 100vw;
-        height: 32rem;
+        height: 35rem;
         float: none;
         position: absolute; /* このpositionが効かない理由 → 親要素のtopの数値が生き残ってた… */
         top: auto;
@@ -471,6 +471,12 @@ footer{
 
 .square_btn:active {
     box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.30);
+}
+
+.price_box_request p{
+    font-size: 1.3rem;
+    font-weight: normal;
+    padding-top: .5rem;
 }
 
 /* --- section_share --------------------------- */
@@ -945,4 +951,141 @@ border: .2rem solid #8ac2d0;
     color: #B4BE4E;
     border-bottom: #B4BE4E .2rem solid;
     border: #B4BE4E .3rem solid;
+}
+
+
+/* --- section_request --------------------------- */
+
+
+.request_wrap{
+    width: 35rem;
+    background-color:#fff;
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    margin-left: -17.5rem; 
+    z-index: 30000;
+    display: none;
+}
+
+.request_wrap h3{
+    width: 100%;
+    height: 5rem;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    color: #595959;
+    border-bottom: #d4d4d4 .1rem solid;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+
+.request_wrap p{
+    margin: .3rem 1.5rem;
+    color: #595959;
+    font-size: 1.5rem;
+}
+
+.request_wrap p span{
+    font-weight: bold;
+    padding: 2rem 1.5rem .5rem 1.5rem;
+    border-bottom: #d4d4d4 .2rem solid;
+    display: inline-block;
+}
+
+
+
+
+
+.address_edit a{
+    color: #fff;
+    background-color: #ADB934;
+    padding: .5rem 1rem;
+    margin: 0 1.5rem;
+    transform: translateY(-3.5rem);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 2%;
+    float: right;
+}
+
+.request_address{
+    clear: both;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    border-radius: .5rem;
+    transform: translateY(-2rem);
+}
+
+.request_address p{
+    color: #595959;
+    font-size: 1.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.checkbox{
+    margin: .5rem .5rem 1rem 1.5rem;
+    float: left;
+}
+
+.credit_card{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.credit_card p{
+    font-size: 1.3rem;
+}
+
+.credit_card input{
+    width: 63%;
+    height: 2rem;
+}
+
+.credit_card_center input{
+    transform: translateY(1rem);
+}
+    
+.request_button{
+    width: 100%;
+    height: 10rem;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.request_button_go{
+    width: 80%;
+    margin: 1.3rem auto .5rem auto;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: .5rem;
+    background-color: #FF5A5F;
+    border:#FF5A5F .2rem solid;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.request_button_go:hover{
+    color: #FF5A5F;
+    background-color: #FFF;
+}
+
+.request_button_cancel{
+    width: 45%;
+    margin: 0rem auto 1rem;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: .5rem;
+    background-color: #595959;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.request_button_cancel:hover{
+    background-color: #717171e4;
 }

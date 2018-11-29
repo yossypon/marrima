@@ -44,7 +44,7 @@ $(function(){
 $(function(){
     $("body").append("<div id='glayLayer'></div>");
     $("#glayLayer").click(function(){
-        $(this).hide()
+        $(this).css("display","none");
         $(".top_parts").css("margin-left","0px");
         $(".head_face_hamburger_menu .middle").css("background","#5BBAC7");
         $(".head_face_hamburger_menu .top").css("transform","rotate(0deg) translateY(-1.2rem)");
@@ -101,3 +101,30 @@ $(function(){
     })
 })
 
+
+// 購入リクエスト --------------------------------------------------
+
+// 購入ボタンクリックでリクエスト画面出てくる
+$(function(){
+    $(".square_btn").click(function(){
+        $(".request_wrap").css("display","block");
+    })
+})
+
+// グレーレイヤーかける、クリックしたら消す、ハンバーガー戻すなど
+$(function(){
+    $("body").append("<div id='glayLayer'></div>");
+    $("#glayLayer").click(function(){
+        $(this).hide()
+        $(".request_wrap").css("display","none");
+    });
+    $(".request_button_cancel").click(function(){
+        $("#glayLayer").hide()
+        $(".request_wrap").css("display","none");
+    });
+    $(".square_btn").click(function(){
+        setTimeout(function(){
+            $("#glayLayer").fadeIn();  // メンバーメニュー開いた後だと左に空白できる、、、
+        },300);
+    })
+})

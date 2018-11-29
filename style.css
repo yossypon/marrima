@@ -488,6 +488,13 @@ div#glayLayer{
     padding: 2rem;
 }
 
+@media screen and (max-width: 70rem){
+    .instagram_items{
+        width: 80vw;
+        padding: .2rem;
+    } 
+}
+
 .instagram_items h2{
     font-size: 2rem;
     color: rgb(130,130,130);
@@ -505,12 +512,12 @@ div#glayLayer{
 	overflow:hidden;
 }
 
-@media screen and (max-width: 50rem){
+@media screen and (max-width: 70rem){
     #container{
-        width: 47rem;
+        width: 44rem;
     }
     #slideGalley{
-        width: 47rem;
+        width: 44rem;
     }
 
 }@media screen and (max-width: 40rem){
@@ -538,16 +545,25 @@ div#glayLayer{
 	display: inline-block;
 	*display: inline;
 	*zoom:1;
-	width: 2rem;
-	height: 2rem;
-    background: url(./images/page.png);
+	width: 1.5rem;
+	height: 1.5rem;
+    background: url(./images/page.png) no-repeat;
     margin: 0 .4rem 0 0;
-    transform: translateY(.5rem);
 }
 #paging li.active{
-    background: url(./images/page_active.png);
-    transform: translateY(.5rem);
+    background: url(./images/page_active.png) no-repeat;
 }
+
+
+@media screen and (max-width: 70rem){
+    #paging li{
+        background: url(./images/page_small.png) no-repeat;
+    }
+    #paging li.active{
+        background: url(./images/page_active_small.png) no-repeat;
+    }
+}
+
 #nav{
 	display: block; /* 初めから表示させとくことにする */ 
 }
@@ -577,10 +593,10 @@ div#glayLayer{
     cursor: pointer;
 }
 
-@media screen and (max-width: 50rem){
+@media screen and (max-width: 70rem){
     .insta_item{
-        width: 45rem;
-        height: 45rem;
+        width: 41rem;
+        height: 41rem;
     }
 
 }@media screen and (max-width: 40rem){
@@ -661,27 +677,24 @@ div#glayLayer{
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 70rem){
+    .new_items{
+        padding: 2rem .5rem;
+    }
+    .new_item{
+        margin: .5rem;
+        width: 15rem;
+        height: 17rem;
+    }
+}
+
 .new_item p{
     font-size: 10%;
     margin: 0.1rem 0 0.5rem 0.5rem;
     color: rgb(55, 55, 55);
 }
 
-/* 35rem以上43rem以下の環境 */
-/*@media screen and (min-width:35rem) and (max-width:43rem){
-    .new_item{
-        width: 20rem;
-        height: 23rem;
-    }
-}*/
-
-/* 64rem以下の環境 */ /* 💡 iPhone7の幅は640px */
-@media screen and (max-width:64rem){
-    .new_item{
-        width: 13rem;
-        height: 15rem;
-    }
-}
 
 .slideshow_pic{
     width: 100%;

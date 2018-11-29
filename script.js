@@ -103,11 +103,11 @@ $(function(){
         $("#nav").show();
         clearInterval(timerId);
     },function(){
-        //$("#nav").hide()
         timerId = setInterval(function(){
             $("#nav .next").click();
         },3500);
     });
+    
     
     
     //右矢印ボタンが押された際の挙動
