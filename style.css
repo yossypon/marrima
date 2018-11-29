@@ -488,18 +488,24 @@ div#glayLayer{
     padding: 2rem;
 }
 
-@media screen and (max-width: 70rem){
-    .instagram_items{
-        width: 80vw;
-        padding: .2rem;
-    } 
-}
-
 .instagram_items h2{
     font-size: 2rem;
     color: rgb(130,130,130);
     margin: 2rem 0;
 }
+
+@media screen and (max-width: 70rem){
+    .instagram_items{
+        width: 80vw;
+        padding: .2rem;
+    } 
+    .instagram_items h2{
+        padding-left: 2rem;
+        box-sizing: border-box;
+    }
+}
+
+
 
 /* ここからカルーセル関係 */
 #container{
@@ -686,6 +692,10 @@ div#glayLayer{
         margin: .5rem;
         width: 15rem;
         height: 17rem;
+    }
+    .new_items h2{
+        padding-left: 2rem;
+        box-sizing: border-box;
     }
 }
 
@@ -977,4 +987,36 @@ footer{
 
 .footer_link a:hover{
     color: rgba(77, 206, 228, 0.955);
+}
+
+/* ---- logout ------------------------------------------- */
+
+.logout{
+    width: 20rem;
+    height: 10rem;
+    background-color: rgb(119, 195, 230);
+    box-shadow: .6rem .6rem #668AD8;
+    text-align: center;
+    position: fixed;
+    top: 10%;
+    left: 45%;
+    margin-left: 10rem; 
+    z-index: 50000;
+    display: none;
+}
+
+.logout p{
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 3rem;
+}
+
+.logout a{
+    font-size: 1.3rem;
+    color: rgb(45, 65, 108);
+}
+
+.logout a:hover{
+    color: rgba(45, 65, 108, 0.776);
 }

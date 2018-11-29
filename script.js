@@ -190,3 +190,17 @@ $(function(){
 		setInterval(switchText, interval);
 	})
 })
+
+
+// ---- logout --------------------------------------------
+$(function(){
+    $("#glayLayer").click(function(){
+        $(this).hide()
+        $(".logout").css("display","none");
+    });
+    $(".member_logout").click(function(){
+        setTimeout(function(){
+            $(".logout").css("display","block");
+        },200);
+    })
+})

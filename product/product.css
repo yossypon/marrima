@@ -421,7 +421,7 @@ footer{
 }
 
 .price_box{
-    background-color: #4F5253;
+    background-color: rgba(240, 239, 238, 0.831);
     width: 100%;
     padding: 2rem;
     display: flex;
@@ -432,7 +432,7 @@ footer{
 }
 
 .price_box p{
-    color: #fff;
+    color: rgb(106, 105, 105);
     font-weight: bold;
     font-size: 1.7rem;
     padding-right: 1rem; 
@@ -459,11 +459,11 @@ footer{
     display: inline-block;
     text-align: center;
     padding: .5rem 2rem;
-    color: rgb(46, 46, 46);
+    color: #fff;
     font-size: 1.6rem;
     font-weight: bold;
     text-decoration: none;
-    background: #fff;
+    background: #FF5A5F;
     border-radius: .4rem;
     box-shadow: inset 0 .3rem 0 rgba(255,255,255,0.2), inset 0 -0.3rem 0 rgba(0, 0, 0, 0.153);
     border: solid .2rem #cdcdcd;/*線色*/
@@ -958,12 +958,12 @@ border: .2rem solid #8ac2d0;
 
 
 .request_wrap{
-    width: 35rem;
+    width: 32rem;
     background-color:#fff;
     position: absolute;
     top: 0rem;
     left: 50%;
-    margin-left: -17.5rem; 
+    margin-left: -16rem; 
     z-index: 30000;
     display: none;
 }
@@ -981,7 +981,7 @@ border: .2rem solid #8ac2d0;
 }
 
 .request_wrap p{
-    margin: .3rem 1.5rem;
+    margin: .3rem 1.45rem;
     color: #595959;
     font-size: 1.5rem;
 }

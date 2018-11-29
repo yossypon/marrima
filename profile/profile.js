@@ -75,11 +75,9 @@ $(function(){
     });
     
     // 現在地をタブに色付けしてわかるようにしたい → 付いた色を自動で消えるように　setTimeout使った → 🔥 スマホで効かない
-    $(window).scroll(function () {
+    $('#tab li a').mouseleave(function () {
         setTimeout(function(){
-        if ($(this).scrollTop() > 0) {
             $("#tab li a").removeClass();
-        }
     },1500);
     });
 });
