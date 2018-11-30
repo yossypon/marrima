@@ -1,5 +1,5 @@
-// --- top_partsの動き(スクロールイベント) ---------------------------------------------------------------------------- //
-   // 上から30px以下の間は何もしない、30px以上進んだらposition:fixed;でtop:0;固定にする
+// --- top_partsの動き(スクロールイベント) -------------------------------------------------------------- //
+// 上から30px以下の間は何もしない、30px以上進んだらposition:fixed;でtop:0;固定にする
 $(function(){
     $(".top_parts").css({"position": "relative"});
     $(window).scroll(function(){        
@@ -12,12 +12,12 @@ $(function(){
 })
 
 
-// --- gnavの動き --------------------------------------------------------------------------------------------------- //
+// --- gnavの動き -------------------------------------------------------------------------------------- //
     // リサイズでやる
     $(window).on('load resize', function(){
         $(".gnav_2nd").hide();
         var w = $(window).width();
-        var x = 801; // 800pxがFireHD8の画面サイズ
+        var x = 801;
         if(w >= x){
             $(".gnav_1st_stage > li").mouseenter(function(){
                 $("ul:not(:animated)",this).show();
@@ -32,7 +32,7 @@ $(function(){
     })
 
 
-// --- member_menuの動き ----------------------------------------------------------------------------------------------- //
+// --- member_menuの動き ----------------------------------------------------------------------------- //
 // ハンバーガーをクリックしたら１秒後にバツ印になる
 $(function(){
     $(".head_face_hamburger_menu").click(function(){
@@ -48,7 +48,7 @@ $(function(){
 // ハンバーガーをクリックしたら左からメニューを持ってくる
 $(function(){
     $(".head_face_hamburger_menu").click(function(){
-        $(".top_parts").css("margin-left","280px"); // margin-rightはだめ（自分が動きたいときはmargin-left）
+        $(".top_parts").css("margin-left","280px"); 
         $(".top_parts").css("transition",".5s");
         $("#glayLayer").css("margin-left","280px");
     })
@@ -84,7 +84,7 @@ $(function(){
 })
 
 
-// --- Instagram_Itemsのカルーセル --------------------------------------------------------------------------------------- //
+// --- Instagram_Itemsのカルーセル --------------------------------------------------------------------- //
 $(function(){
     //ページングの設定
     $("#slide li").each(function(){
@@ -139,7 +139,7 @@ $(function(){
 
 
 
-// --- new_itemのスライドショー （画像）------------------------------------------------------------------------------------ //
+// --- new_itemのスライドショー （画像）------------------------------------------------------------------ //
 $(window).on('load resize', function(){
     var timer = false;
         if (timer !== false){
@@ -155,13 +155,13 @@ $(window).on('load resize', function(){
         })
     },200);
 })
-    // 上の方法で幅の半分の長さを取得しているが、パソコン画面でリサイズした際に値を新しく取得するわけではないので、自動で新しく値を取得させるには専用の記述が必要。（これはかなりCPU喰うらしい）スマホの画面、タブレットの画面などそれぞれの端末で開いた際の表示は問題ない。問題なのは、PCで閲覧中に画面をリサイズされた場合。
+
 
 $(window).on('load', function(){
 	var interval = 3500; 
 	$('.slideshow_pic').each(function(){
 
-        var container = $(this);  // このthisは、slideshow_pic
+        var container = $(this); 
 		function switchImg(){
 			var images = container.find('img');
 			var first = images.eq(0);

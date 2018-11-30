@@ -45,7 +45,6 @@ html{
 
 /* --------- top_parts -------------------------------------------------------*/
 .top_parts{
-    /*position: fixed か relative;  ここはjQueryでどちらか選んで付ける */
     width:100vw;
     height: 8.8rem;
     z-index: 1000;
@@ -128,8 +127,8 @@ html{
 /* --- head_face_icon ---------------*/
 .head_face_icon img{
     max-width: 4rem;
-    transform: translateX(3rem); /* ハンバーガーとhead_face_menuの幅が違うので位置調整*/
-    vertical-align: bottom; /* これいる？ベースラインの観点から必要！ */
+    transform: translateX(3rem); 
+    vertical-align: bottom;
 }
 
 /* --- head_face_menu ---------------*/
@@ -167,7 +166,7 @@ html{
 
 .gnav_1st_stage a{
     color:#666666;
-    font-size: 1.4rem; /* 💡 スマホで見たら文字大きかったから */
+    font-size: 1.4rem; 
     text-align: center;
     display: block;
 }
@@ -217,7 +216,7 @@ html{
 .gnav_1st_stage>li{
     width: 15%;
     padding: 1rem;
-    z-index: 2000; /* これでhoverで出てくるメニューがtop_pageの文字の下に潜らない */
+    z-index: 2000; 
 }
 
 .gnav_2nd>li{
@@ -234,10 +233,10 @@ html{
     background-color: rgba(249, 249, 249, 0.955);
     position: absolute;
     top: 0;
-    left: -28rem; /* この位置指定でtop_partsの左にmember_menuがある状態(通常は見えない)  */
+    left: -28rem; 
 }
 div#glayLayer{
-	display:none; /* あらかじめ見えなくしておく処理 */
+	display:none; 
 	position:fixed;
 	left:0;
 	top:0;
@@ -427,7 +426,7 @@ div#glayLayer{
     max-width: 100%;
 }
 
-/* 52rem以下の環境 */ /* 💡 スマホで見たら文字大きかったから */
+/* 52rem以下の環境 */ 
 @media screen and (max-width:32rem){
     .top_page h1{
         font-size: 3rem;
@@ -571,7 +570,7 @@ div#glayLayer{
 }
 
 #nav{
-	display: block; /* 初めから表示させとくことにする */ 
+	display: block; 
 }
 #nav .prev{
 	position: absolute;
@@ -714,7 +713,7 @@ div#glayLayer{
     object-fit: contain;
     text-align: center;
     vertical-align: bottom;
-    position:relative; /* スライドショーのため */
+    position:relative; 
 }
 
 .slideshow_pic img{
@@ -823,7 +822,6 @@ div#glayLayer{
     color: rgb(130,130,130);
 }
 
-/* 💡 スマホで見たら文字大きかったから */
 @media screen and (max-width:64rem){
     .how_page_parts p{
         font-size: 1.6rem;
@@ -885,7 +883,6 @@ div#glayLayer{
     margin: 1rem 0;
 }
 
-/* 💡 スマホで見たら文字大きかったから */
 @media screen and (max-width:64rem){
     .news_article h3 a{
         font-size: 1.5rem;
@@ -913,7 +910,6 @@ div#glayLayer{
     color: rgb(89, 89, 89);
 }
 
-/* 💡 スマホで見たら文字大きかったから */
 @media screen and (max-width:64rem){
     .news_contents p a{
         font-size: 1.2rem;
@@ -935,7 +931,7 @@ div#glayLayer{
 
 .vision_page_word{
     width: 100%; 
-    padding-top: 60%; /* このようにタテヨコ比を固定で伸縮させる場合にこのpadding-top(かbottom)を使う */
+    padding-top: 60%; 
     background-image: url(images/vision.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -972,7 +968,7 @@ footer{
     transform: translateX(-2rem);
     border-bottom: rgb(152, 152, 152) .1rem solid;
     text-align: center;
-    transform: translateX(.15rem); /* なぜスマホで見ると中央にいかない？ */
+    transform: translateX(.15rem); 
 }
 
 .footer_link a{

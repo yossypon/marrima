@@ -144,7 +144,7 @@ html{
     display: block;
 }
 
-/* --- 現在開いているカテゴリ👇 --- */
+/* --- 現在開いているカテゴリ--- */
 .gnav_1st_stage > li:nth-child(3){
     background-color: rgba(196, 196, 196, 0.948);
 }
@@ -152,7 +152,8 @@ html{
 .gnav_1st_stage > li:nth-child(3) > a{
     color: #FFF;
     font-weight: bold;
-}/* --- 現在開いているカテゴリ☝️ --- */
+}
+/* --- 現在開いているカテゴリ --- */
 
 
 /* 45rem以下の環境 */
@@ -338,7 +339,7 @@ footer{
     margin: 2rem 0 0 0;
     padding: 4rem 0 3rem 0;
     box-sizing: border-box;
-    clear: both; /* これでフロート解除できてるか注意🔥 */
+    clear: both; 
 }
 
 @media screen and (max-width:70rem){
@@ -362,7 +363,7 @@ footer{
     transform: translateX(-2rem);
     border-bottom: rgb(152, 152, 152) .1rem solid;
     text-align: center;
-    transform: translateX(.15rem); /* なぜスマホで見ると中央にいかない？ */
+    transform: translateX(.15rem); 
 }
 
 .footer_link a{
@@ -379,9 +380,7 @@ footer{
     color: rgba(77, 206, 228, 0.955);
 }
 
-/* -----------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .wrap{
     width: 100vw;
@@ -406,7 +405,7 @@ footer{
         width: 100vw;
         height: 35rem;
         float: none;
-        position: absolute; /* このpositionが効かない理由 → 親要素のtopの数値が生き残ってた… */
+        position: absolute;
         top: auto;
         bottom: -3rem;
         right: 0rem;
@@ -466,7 +465,7 @@ footer{
     background: #FF5A5F;
     border-radius: .4rem;
     box-shadow: inset 0 .3rem 0 rgba(255,255,255,0.2), inset 0 -0.3rem 0 rgba(0, 0, 0, 0.153);
-    border: solid .2rem #cdcdcd;/*線色*/
+    border: solid .2rem #cdcdcd;
 }
 
 .square_btn:active {
@@ -849,17 +848,17 @@ border: .2rem solid #8ac2d0;
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: #5BBAC6;/*ボタン色*/
+    background: #5BBAC6;
     color: #FFF;
     font-size: 1.5rem;
     border-bottom: solid 4px rgb(51, 130, 140);
     border-radius: 3px;
 }
-.more_btn:active {/*ボタンを押したとき*/
+.more_btn:active {
     -ms-transform: translateY(4px);
     -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-bottom: none;
 }
 
